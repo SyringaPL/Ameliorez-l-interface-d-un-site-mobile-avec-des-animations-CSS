@@ -3,10 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--Indispensable pour les Media Queries-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ohmyfood</title>
+
+    <!--police de caractères
+        google fonts-->
+
+    <!--Lien fontawasome (issu de cdnjs.com) mis-à-jour(différent de la doc de base, qui était au format 6.2.1)--> 
+
+     <!--lien avec le css ! Ne surtout pas oublier !-->
+     <link href="css" rel="stylesheet">
+
+     <!--liens media queries-->
+     <link href="" rel="stylesheet">
+     <link href="" rel="stylesheet">
+
+    <!--Titre de la page, apparait sur l'onglet du navigateur-->
+    <title>Homepage</title>
 </head>
 <body>
-    
+    <div class="main-container">
+
+        <header>
+            <logo>
+                <img src="/assets/logo/ohmyfood@2x.svg" alt="logo_restaurant">
+            </logo>
+            <div class="localisation">
+                <i>
+               
+                </i>
+                Paris, Belleville
+            </div>
+        </header>
+
+        <main>
+            <section class="presentation">
+                <p>Reserver le menu qui vous convient</p>
+                <p>Découvrez des restaurants d'exception, selectionnés par nos soins.</p>
+            
+                <div class=" btn btn_color btn_rounded">
+                Explorer nos restaurants
+                </div>
+            </section>
+
+            <section class="sorting">
+                <div class="sorting_title">
+                    <h2>Fonctionnement</h2>
+                </div>
+                <ol class="sorting_box">
+                    <li class="sorting_box_restaurant"> <a href="#"> <i class=""></i>Choisissez un restaurant</li>
+                    <li class="sorting_box_menu"> <a href="#"><i class=""></i>Composez votre menu</li>
+                    <li class="sorting_box_on_site" href="#"><i class=""></i>Dégustez au restaurant</li>
+                </ol>
+            </section>
+
+            <section class="restaurants_list">
+                <div class="restaurants_list_title">
+                    <h2>Restaurants</h2>
+                </div>
+                <div class="restaurants_cards">
+                    <article class="restaurants_cards_mini">
+                        <img src="" alt="image du restaurant">
+                        <div class="restaurants_cards_content">
+                            <div class="restaurants_cards_text">
+                                <h3 class="restaurants_cards_title">La palette du goût</h3>
+                                <p class="restaurants_cards_subtitle">Ménilmontant</p>
+                                <i class="heart"></i>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="restaurants_cards_mini">
+                        <img src="" alt="image du restaurant">
+                        <div class="restaurants_cards_content">
+                            <div class="restaurants_cards_text">
+                                <h3 class="restaurants_cards_title">La note enchantée</h3>
+                                <p class="restaurants_cards_subtitle">Charonne</p>
+                                <i class="heart"></i>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="restaurants_cards_mini">
+                        <img src="" alt="image du restaurant">
+                        <div class="restaurants_cards_content">
+                            <div class="restaurants_cards_text">
+                                <h3 class="restaurants_cards_title">A la française</h3>
+                                <p class="restaurants_cards_subtitle">Cité Rouge</p>
+                                <i class="heart"></i>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="restaurants_cards_mini">
+                        <img src="" alt="image du restaurant">
+                        <div class="restaurants_cards_content">
+                            <div class="restaurants_cards_text">
+                                <h3 class="restaurants_cards_title">Le délice des sens</h3>
+                                <p class="restaurants_cards_subtitle">Folie-Méricourt</p>
+                                <i class="heart"></i>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>       
+        </main>
+
+        <footer>
+            <nav class="nav_footer">
+                <ul class="ul_footer">
+                    <li><i class="knife&foark"></i>Proposer un restaurant</li>
+                    <li><i class="hands_shacked"></i>Devenir partenaire</li>
+                    <li>Mentions légales</li>
+                    <li>Contact</li>
+                </ul>
+            </nav>
+        </footer>
+    </div>
 </body>
 </html>
