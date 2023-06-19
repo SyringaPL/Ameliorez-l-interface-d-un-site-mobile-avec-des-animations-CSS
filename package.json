@@ -1,0 +1,11 @@
+{
+  "name": "project4",
+  "version": "1.0.0",
+  "description": "Formation OpenClassroom février à novembre 2023",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/style.scss:./public/css/style.css"
+  },
+  "author": "",
+  "license": "ISC"
+}
