@@ -1,0 +1,30 @@
+footer {
+    width: 100%;
+    height: auto;
+    color: $main-bg-color;
+    background-color: $main-police-color;
+    padding: 14px;  
+}
+    footer img{
+        width: 35%;
+        /**Comment on change la couleur du logo SVG ?
+        Via une variable ? **/
+    }
+        .nav_footer .partner{
+            @include nav-footer;
+        }
+            .contact{
+                @include contact;
+            }
+                .nav_footer i{
+                    margin: 6px 10px 6px 6px;
+                }
+                    .ul_footer{
+                        list-style-type: none;
+                    }
+                        .ul_footer a{
+                            text-decoration: none;
+                        }
+                            .ul_footer a:visited{
+                                color: $main-bg-color;
+                            }

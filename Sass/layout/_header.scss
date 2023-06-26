@@ -1,0 +1,30 @@
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $main-bg-color;
+}
+    .logo{
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+        input{
+            @include nav-footer;
+            color: $main-police-color;
+            border: none;
+            background-color:transparent;   
+            text-align: center;
+        }
+            .localisation{
+                background-color: $second-bg-color;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+
+            /**Remplacer ligne verte par shadow var2**/
+                div.localisation{
+                    border-top: solid $gradient;
+                }

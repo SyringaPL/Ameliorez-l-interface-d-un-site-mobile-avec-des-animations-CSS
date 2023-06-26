@@ -1,0 +1,35 @@
+* {
+    font-family: 'Roboto';
+}
+.presentation{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    h1{
+        @include presentation-h1;
+        margin: 20px;
+        }
+    p{
+        @include presentation-p;
+        }  
+        .btn{ 
+            @include nav-footer;
+        }
+}
+.sorting{
+    .sorting li{
+        background-color: $main-bg-color;
+        border-color: $second-bg-color;
+        color: $main-police-color;
+    }
+    .sorting_title{
+        @include presentation-h1;
+    }
+}
+.sorting_box i{
+    color: $main-police-color;
+    margin-right: 25px;
+    padding: 10px;
+    /**Trouver comment cibler la 3ème occurence de la liste 
+    pour changer la couleur de l'icone**/
+}

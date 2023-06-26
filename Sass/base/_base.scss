@@ -1,0 +1,23 @@
+*{
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+body{ 
+    margin: 0px;  
+    background-color: $main-bg-color;
+    }
+.main-container{
+    width: 100vw;
+    @media (min-width: 1400px) {
+        width: 1400px;
+    }
+    box-sizing: border-box;
+    margin: auto;
+    justify-content: center;
+    }
+    /** Bordure personnalisée **/
+main{
+    padding: 15px;
+    }
