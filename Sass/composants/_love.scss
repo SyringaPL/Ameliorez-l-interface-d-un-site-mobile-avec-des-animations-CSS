@@ -1,0 +1,38 @@
+.like{/**container (custom le label)**/
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+/**container innput (cacher la checkbox par defaut du navigateur**/
+.like input{
+    position:absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.unlove{ /**créer une checkbox custom**/
+    position: absolute;
+    color: rgb(0, 0, 0);
+    background-color: $main-bg-color;
+}
+.like input:checked~.unlove{
+    display: none;
+    .love{
+        display: contents;
+        transition: color ease-in-out;
+    }
+}
+.love{
+    color: $gradient-main-color;
+}
+.fa-heart:after{
+    content:"";
+    position: absolute;
+    display: none;
+}

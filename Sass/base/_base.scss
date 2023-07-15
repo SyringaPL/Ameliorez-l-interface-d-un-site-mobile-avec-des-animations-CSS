@@ -1,3 +1,4 @@
+/* Normalizer maison */
 *{
     margin-left: 0px;
     margin-right: 0px;
@@ -8,6 +9,7 @@ body{
     margin: 0px;  
     background-color: $main-bg-color;
     }
+/* Bloc qui permet l'affichage avec une largeur max sur grand écran */
 .main-container{
     width: 100vw;
     @media (min-width: 1400px) {
@@ -21,3 +23,4 @@ body{
 main{
     padding: 15px;
     }
+

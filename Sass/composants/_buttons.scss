@@ -1,7 +1,7 @@
 .btn{
     padding: 13px 18px;
     width: fit-content;
-    display: inline-block;
+    display: inline-block;/**si propriété supprimée, alors puce affichée**/
     &_color{
         background: $gradient;
         color: $main-bg-color;
@@ -10,7 +10,7 @@
         border-radius: 40px; 
     }
     &_square{
-        border-radius:25px;
+        border-radius:20px;
     }
     &_shadow{
         border-color: $gradient;
@@ -20,13 +20,16 @@
         width: 80%;
         margin: 15px 0px;
         border: none;
-    }
+    }        
 }
-ol{
+/**********conflit couleur hover************************/
+.survol:hover{
+    filter: brightness(1.2);
+}
+/**********conflit couleur hover************************/
+ul{
     @include nav-footer;
-    text-align: center;
-    /**Voir pourquoi je n'arrive pas à afficher 
-    les numéros de la liste à puces**/
+    text-align: left;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,3 +37,29 @@ ol{
         flex-direction: row;
     }
 }
+/**Test de puce sur bouton**/
+li .user-guide{
+    padding: 5px 10px;
+    border-radius: 50px;
+    background-color: $gradient-main-color;
+    color: $main-bg-color;
+    margin-left: -30px;
+}
+
+/******************************test remplissage coeur*********************************************/
+    /**A retravailler : coeur /**
+
+.like input{
+    position: absolute;
+    color: red;
+    appearance: none;
+}
+.like input:last-of-type{
+    opacity: 0;
+}
+.like:checked input:last-of-type{
+    opacity: 1;
+}**/
+
+
+

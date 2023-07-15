@@ -15,7 +15,12 @@
         .btn{ 
             @include nav-footer;
         }
+    a{
+        text-decoration-line:none;
+    }
 }
+
+/** Présentation du fonctionnement du concept**/
 .sorting{
     .sorting li{
         background-color: $main-bg-color;
@@ -26,10 +31,24 @@
         @include presentation-h1;
     }
 }
+/** Définission des couleurs de la présentation du fonctionnement **/
 .sorting_box i{
     color: $main-police-color;
     margin-right: 25px;
     padding: 10px;
-    /**Trouver comment cibler la 3ème occurence de la liste 
-    pour changer la couleur de l'icone**/
+}
+/**Colorer la dernière icone en violet**/
+.sorting_box .fa-store{
+    color: $gradient-main-color;
+}
+
+/**Police de l'étiquette "Nouveau" de la fiche restaurant sur la page d'accueil**/
+.new{
+    @include nav-footer;
+    margin: 10px;
+    padding: 5px 10px;
+}
+/**Couleur du coeur en violet**/
+.fa-regular{
+    color: #9356DC;
 }

@@ -1,3 +1,11 @@
+/* Police du titre de la société*/
+@mixin logo-header{
+    font-family: 'shrikhand';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 30px;
+}
+/********************** Regroupement des polices répétitives mobile-first sous forme de mixin *****************/
 @mixin presentation-h1{
     font-family: 'Roboto';
     font-style: normal;
@@ -21,4 +29,56 @@
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
+}
+@mixin logo-footer{
+    font-family: 'shrikhand';
+    font-style: regular;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+/*************** Regroupement des polices répétitives desktop sous forme de mixin********************/
+/*Le logo*/
+@mixin logo-desktop{
+    font-family: 'shrikhand';
+    font-style: bold;
+    font-weight: 700;
+    font-size: 50px;
+/**************Verifier l'aspect*************************/
+}
+/*Les titres desktop*/
+@mixin desktop-titles{
+    font-family: 'roboto';
+    font-style: bold;
+    font-weight: 700;
+    font-size: 24px;
+}
+/*Les sous-titres desktop*/
+@mixin desktop-subtitles{
+    font-family: 'roboto';
+    font-style: light;
+    font-weight: 300;
+    font-size: 18px;
+}
+/*Police de présentation concept + partie du footer*/
+@mixin desktop-btn{
+    font-family: 'roboto';
+    font-style: medium;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+
+
+/*Tentative de mixin pour media queries à revoir*/
+@mixin tablet-only {
+    @media screen and (min-width: map-get($breakpoints,tablet)){
+        font-style: bold;
+        font-size: 40px;
+    }
+}
+@mixin desktop-only {
+    @media screen and (max-width: map-get($breakpoints,desktop)){
+        @content
+    }
 }

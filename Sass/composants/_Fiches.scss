@@ -2,18 +2,53 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    &_title{
+        @include presentation-h1;
+        @include tablet-only;
+        }
+        
 }
 .restaurants_list h2{
     width: 100%;
 }
-.restaurants_list_title{
-    @include presentation-h1;
-    }
 .restaurants_cards{
     display: flex;
     flex-direction: column;
     width: 100%;
     height: auto;
+    &_content{
+        display: block;
+        width: 80%;
+        }
+    &_title{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        margin-bottom: 4px;
+        }
+    &_subtitle{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 17px;
+        margin-top: 4px;
+        }
+    &_mini{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        &_img{
+            width: 100%;
+            display: flex;
+            justify-content: right;
+            }
+    }
+    }
+    .new{
+        background-color: $miscellanius-bg-color;
+        color: $miscellanius-police-color;
+        position: absolute;
     }
 .restaurants_cards_mini img{
     display: flex;
@@ -24,25 +59,6 @@
     border-radius: 20px 20px 0px 0px;
     /**Ajouter étiquette "nouveau" en span**/
     }
-
-.restaurants_cards_content{
-    display: block;
-    width: 80%;
-    }
-.restaurants_cards_title{
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
-    margin-bottom: 4px;
-    }
-.restaurants_cards_subtitle{
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 300;
-    font-size: 17px;
-    margin-top: 4px;
-    }
 .like{
     display: flex;
     justify-content: end;
@@ -50,8 +66,13 @@
     color: $main-police-color;
     font-size: 22px;
     }
-.restaurants_cards_mini{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+header>img{
+        display: flex;
+        width: 100%;
+        height: 170px;
+        object-fit: cover;
+        object-position: center;
     }
+
+
+     
