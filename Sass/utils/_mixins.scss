@@ -37,6 +37,25 @@
     font-size: 18px;
 }
 
+@mixin green-light{
+    border-bottom-style: solid;
+    border-bottom-color:$miscellanius-bg-color;
+    width:12%; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*************** Regroupement des polices répétitives desktop sous forme de mixin********************/
 /*Le logo*/
 @mixin logo-desktop{
@@ -77,6 +96,9 @@
     width: fit-content;
     display: inline-block;
 }
+@mixin btn--modif{
+    display: flex;
+}
 @mixin btn_color{
     background: $gradient;
     color: $main-bg-color;
@@ -110,9 +132,35 @@
     @include btn_sshadows;
     @include btn_modif;
 }
-
-
-
+@mixin square-two{
+    @include btn--modif;
+    @include btn_square;
+    @include btn_sshadows;
+}
+@mixin menu{
+    @include btn--modif;
+    background-color: $main-bg-color;
+    @include btn-rounded;
+    margin-top: -45px;
+}
+@mixin restaurant-police-title{
+    font-family: 'shrikhand';
+    font-style: regular;
+    font-weight: 400;
+    font-size: 28px;
+}
+@mixin plates-names{
+    font-family: 'roboto';
+    font-style: medium;
+    font-weight: 500;
+    font-size: 18px;
+}
+@mixin plates-close-one{
+    font-family: 'roboto';
+    font-style: light;
+    font-weight: 300;
+    font-size: 15px;
+}
 
 
 

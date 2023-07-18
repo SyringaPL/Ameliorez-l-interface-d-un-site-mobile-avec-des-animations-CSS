@@ -1,0 +1,27 @@
+/* Zone de saisie pour la localisation */
+input{
+    @include nav-footer;
+    color: $main-police-color;
+    border: none;
+    background-color:transparent;   
+    text-align: center;
+    width: 80%;
+    }
+/* Bloc définissant la zone de saisie de la localisation */ 
+.localisation{
+    background-color: $second-bg-color;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    @include shadow;
+    }
+div.localisation{
+    border-top: solid $gradient ;
+    }
+.form{
+    display: flex;
+    width: 36%;
+    justify-content: center;
+    }

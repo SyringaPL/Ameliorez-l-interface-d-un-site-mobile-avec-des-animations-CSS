@@ -5,6 +5,7 @@
     text-align: center;
     align-items: center;
     justify-content: center;
+    padding: 15px;
     h1{
         @include presentation-h1;
         margin: 20px;
@@ -23,6 +24,7 @@
 /** Présentation du fonctionnement du concept**/
 .sorting{
     margin-top: 7rem;
+    padding: 15px;
     .sorting li{
         background-color: $main-bg-color;
         border-color: $second-bg-color;
@@ -52,4 +54,32 @@
 /**Couleur du coeur en violet**/
 .fa-regular{
     color: #9356DC;
+}
+/*Couleur de la coche sur le menu pour commander*/
+
+.green-halo i{
+    background-color: $miscellanius-bg-color;
+    margin: 2px;
+    padding:2px;
+    border-radius: 50%;
+    color: $miscellanius-bg-color;
+    background-color: $main-bg-color;
+}
+.green-halo{
+    background-color: $miscellanius-bg-color;
+    padding: 26px;
+    border-radius: 0 20px 20px 0;
+    margin-left: 16px;
+     /***position: absolute;******************************************/
+
+   
+    height: auto;
+}
+.restaurants_menu ~h3{
+    margin-left: 250px;
+}
+/*Police de caractère du nom du restaurant*/
+.restaurants_name h1{
+    margin-left: -10px;
+    @include restaurant-police-title;
 }
