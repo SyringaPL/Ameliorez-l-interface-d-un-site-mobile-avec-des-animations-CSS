@@ -6,15 +6,10 @@
 /*Les titres desktop*/
 /*Les sous-titres desktop*/
 /*Police de présentation concept + partie du footer*/
+/*Mixin pour regrouper toutes les caractéristiques du gros bouton rose !*/
+/**Raccourci du bouton "explorer nos restaurants (gros bouton rose)"**/
+/**raccourci de la liste mode de fonctionnement du site**/
 /*Tentative de mixin pour media queries à revoir*/
-/* Normalizer maison */
-* {
-  margin-left: 0px;
-  margin-right: 0px;
-  padding-right: 0px;
-  padding-left: 0px;
-}
-
 body {
   margin: 0px;
   background-color: #ffffff;
@@ -36,6 +31,14 @@ body {
 /** Bordure personnalisée **/
 main {
   padding: 15px;
+}
+
+/* Normalizer maison */
+* {
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-right: 0px;
+  padding-left: 0px;
 }
 
 * {
@@ -71,6 +74,9 @@ main {
 }
 
 /** Présentation du fonctionnement du concept**/
+.sorting {
+  margin-top: 7rem;
+}
 .sorting .sorting li {
   background-color: #ffffff;
   border-color: #EAEAEA;
@@ -110,36 +116,6 @@ main {
   color: #9356DC;
 }
 
-.btn {
-  padding: 13px 18px;
-  width: fit-content;
-  display: inline-block; /**si propriété supprimée, alors puce affichée**/
-}
-.btn_color {
-  background: linear-gradient(0deg, #9356DC -25%, #FF79DA 125%);
-  color: #ffffff;
-}
-.btn_rounded {
-  border-radius: 40px;
-}
-.btn_square {
-  border-radius: 20px;
-}
-.btn_shadow {
-  border-color: linear-gradient(0deg, #9356DC -25%, #FF79DA 125%);
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-}
-.btn_modif {
-  width: 80%;
-  margin: 15px 0px;
-  border: none;
-}
-
-/**********conflit couleur hover************************/
-.survol:hover {
-  filter: brightness(1.2);
-}
-
 /**********conflit couleur hover************************/
 ul {
   font-family: "Roboto";
@@ -160,26 +136,50 @@ ul {
 /**Test de puce sur bouton**/
 li .user-guide {
   padding: 5px 10px;
+  margin: 7px;
   border-radius: 50px;
   background-color: #9356DC;
   color: #ffffff;
   margin-left: -30px;
 }
 
-/******************************test remplissage coeur*********************************************/
-/**A retravailler : coeur /**
+/**raccourci du bouton "explorer nos restaurants"**/
+.grosboutonrose {
+  padding: 15px 18px;
+  width: fit-content;
+  display: inline-block;
+  background: linear-gradient(0deg, #9356DC -25%, #FF79DA 125%);
+  color: #ffffff;
+  border-radius: 40px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+.grosboutonrose:hover {
+  filter: brightness(1.2);
+}
 
-.like input{
-    position: absolute;
-    color: red;
-    appearance: none;
+/**raccourci de la liste mode de fonctionnement du site**/
+.square {
+  padding: 15px 18px;
+  width: fit-content;
+  display: inline-block;
+  border-radius: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  width: 80%;
+  margin: 15px 0px;
+  border: none;
+  padding: 24px 18px;
 }
-.like input:last-of-type{
-    opacity: 0;
+
+/**Flèche Retour**/
+.return {
+  display: flex;
+  align-items: center;
 }
-.like:checked input:last-of-type{
-    opacity: 1;
-}**/
+
+.return a:visited {
+  color: #353535;
+}
+
 .restaurants_list {
   display: flex;
   flex-direction: column;
@@ -255,7 +255,6 @@ li .user-guide {
 
 .like {
   display: flex;
-  justify-content: end;
   align-self: center;
   color: #353535;
   font-size: 22px;
@@ -272,11 +271,8 @@ header > img {
 .like { /**container (custom le label)**/
   display: block;
   position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
   cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
+  /*controls whether the user can select text*/
   user-select: none;
 }
 
@@ -295,29 +291,92 @@ header > img {
   background-color: #ffffff;
 }
 
+/*When the checkbox is checked, make disappear the empty heart and appear the filled one*/
 .like input:checked ~ .unlove {
   display: none;
 }
-.like input:checked ~ .unlove .love {
-  display: contents;
-  transition: color ease-in-out;
-}
 
+/* Defines the color of the heart*/
 .love {
   color: #9356DC;
 }
 
+/* Create the checkmark/indicator (hidden when not checked) */
 .fa-heart:after {
   content: "";
   position: absolute;
   display: none;
 }
 
+/*Tentative de creation d'un cube*/
+.dice {
+  perspective: 800px;
+}
+
+.cube {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 60px auto 40px; /*pour centrer le cube sur la page*/
+  transform-style: preserve-3d;
+  transition: transform 2s;
+  transform: translateZ(-100px) rotateX(-220deg) rotateY(45deg);
+}
+
+.cube img {
+  width: 200px;
+  height: 200px;
+}
+
+.cube div {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+}
+
+.front {
+  transform: translateZ(100px);
+}
+
+.back {
+  transform: translateZ(-100px);
+}
+
+.left {
+  transform: rotateY(90deg) translateZ(100px);
+}
+
+.right {
+  transform: rotateY(-90deg) translateZ(100px);
+}
+
+.top {
+  transform: rotateX(90deg) translateZ(100px);
+}
+
+.bottom {
+  transform: rotateX(-90deg) translateZ(100px);
+}
+
+.cube {
+  animation: play-dice 3s infinite ease-in;
+}
+
+/*Animation du cube*/
+@keyframes play-dice {
+  0% {
+    transform: translateZ(-100px) rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: translateZ(-100px) rotateX(360deg) rotateY(360deg);
+  }
+}
 header {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #ffffff;
+  justify-content: space-around;
 }
 
 /* Logo de la société */
@@ -351,6 +410,7 @@ input {
   justify-content: center;
   padding-top: 15px;
   padding-bottom: 15px;
+  box-shadow: 0px -4px 2px 0px #d8d8d8;
 }
 
 div.localisation {
@@ -398,6 +458,7 @@ footer {
 
 .ul_footer {
   list-style-type: none;
+  align-items: flex-start;
 }
 
 .ul_footer a {

@@ -31,8 +31,8 @@
 <body>
     <div class="main-container"> 
         <header>
-            <div class="#">
-                <i class="fa-sharp fa-solid fa-arrow-left"></i>
+            <div class="return">
+                <a href="../index.html"><i class="fa-sharp fa-solid fa-arrow-left fa-lg"></i></a>
                 <img class="logo" src="/assets/logo/ohmyfood@2x.svg" alt="logo_restaurant">
             </div>
             <img src="/assets/images/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="image du restaurant">
@@ -42,7 +42,11 @@
         <main>
                 <div class="restaurant_title">
                     <h1>La palette du goût</h1>
-                    <i class="fa-regular fa-heart"></i>
+                    <label class="like">
+                        <input type="checkbox" checked="checked">
+                        <span class="fa-regular fa-heart unlove"></span>
+                        <span class="fa-solid fa-heart love"></span>
+                    </label>
                 </div>
                 <section class="restaurants_menu">
                     <h3 class="restaurants_menu_title">Entrées</h3>                    
@@ -151,12 +155,15 @@
         </main>
 
         <footer>
+            <div class="logo-footer">
+                Ohmyfood
+            </div>
             <nav class="nav_footer">
                 <ul class="ul_footer">
-                    <li><i class="knife&foark"></i>Proposer un restaurant</li>
-                    <li><i class="hands_shacked"></i>Devenir partenaire</li>
-                    <li>Mentions légales</li>
-                    <li>Contact</li>
+                    <li class="partner"><a href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a></li>
+                    <li class="partner"><a href="#"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a></li>
+                    <li class="contact"><a href="#">Mentions légales</a></li>
+                    <li class="contact"><a href="#">Contact</a></li>
                 </ul>
             </nav>
         </footer>

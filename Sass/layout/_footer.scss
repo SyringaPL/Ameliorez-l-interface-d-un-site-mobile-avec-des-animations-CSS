@@ -3,7 +3,7 @@ footer {
     height: auto;
     color: $main-bg-color;
     background-color: $main-police-color;
-    padding: 14px;  
+    padding: 14px; 
 }
 .logo-footer{
     @include logo-footer;
@@ -19,6 +19,7 @@ footer {
     }
 .ul_footer{
     list-style-type: none;
+    align-items:flex-start;
     }
         .ul_footer a{
             text-decoration: none;

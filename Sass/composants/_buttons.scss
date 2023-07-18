@@ -1,31 +1,3 @@
-.btn{
-    padding: 13px 18px;
-    width: fit-content;
-    display: inline-block;/**si propriété supprimée, alors puce affichée**/
-    &_color{
-        background: $gradient;
-        color: $main-bg-color;
-    }
-    &_rounded{
-        border-radius: 40px; 
-    }
-    &_square{
-        border-radius:20px;
-    }
-    &_shadow{
-        border-color: $gradient;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);   
-    }
-    &_modif{
-        width: 80%;
-        margin: 15px 0px;
-        border: none;
-    }        
-}
-/**********conflit couleur hover************************/
-.survol:hover{
-    filter: brightness(1.2);
-}
 /**********conflit couleur hover************************/
 ul{
     @include nav-footer;
@@ -40,26 +12,28 @@ ul{
 /**Test de puce sur bouton**/
 li .user-guide{
     padding: 5px 10px;
+    margin: 7px;
     border-radius: 50px;
     background-color: $gradient-main-color;
     color: $main-bg-color;
     margin-left: -30px;
 }
-
-/******************************test remplissage coeur*********************************************/
-    /**A retravailler : coeur /**
-
-.like input{
-    position: absolute;
-    color: red;
-    appearance: none;
+/**raccourci du bouton "explorer nos restaurants"**/
+.grosboutonrose{
+    @include gbr;
+    &:hover{
+        filter: brightness(1.2);
+    }
 }
-.like input:last-of-type{
-    opacity: 0;
+/**raccourci de la liste mode de fonctionnement du site**/
+.square{
+    @include square;
 }
-.like:checked input:last-of-type{
-    opacity: 1;
-}**/
-
-
-
+/**Flèche Retour**/
+.return {
+    display: flex;
+    align-items: center;
+}
+.return a:visited{
+    color: $main-police-color;
+}

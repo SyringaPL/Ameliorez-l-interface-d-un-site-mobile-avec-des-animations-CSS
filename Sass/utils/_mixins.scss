@@ -67,6 +67,54 @@
     font-weight: 500;
     font-size: 16px;
 }
+@mixin shadow{
+    box-shadow: 0px -4px 2px 0px darken($second-bg-color, 7%)
+}
+/*Mixin pour regrouper toutes les caractéristiques du gros bouton rose !*/
+
+@mixin btn{
+    padding: 15px 18px;
+    width: fit-content;
+    display: inline-block;
+}
+@mixin btn_color{
+    background: $gradient;
+    color: $main-bg-color;
+}
+@mixin btn-rounded{
+    border-radius: 40px;
+}
+@mixin btn_square{
+    border-radius:20px;
+}
+@mixin btn_sshadows{
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);   
+}
+@mixin btn_modif{
+    width: 80%;
+    margin: 15px 0px;
+    border: none;
+    padding: 24px 18px;
+}
+/**Raccourci du bouton "explorer nos restaurants (gros bouton rose)"**/
+@mixin gbr{
+    @include btn;
+    @include btn_color;
+    @include btn_rounded;
+    @include btn_sshadows;
+}
+/**raccourci de la liste mode de fonctionnement du site**/
+@mixin square{
+    @include btn;
+    @include btn_square;
+    @include btn_sshadows;
+    @include btn_modif;
+}
+
+
+
+
+
 
 
 
