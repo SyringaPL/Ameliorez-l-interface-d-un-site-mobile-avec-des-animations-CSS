@@ -1,4 +1,4 @@
-.like{/**container (custom le label)**/
+.vote-for{/**container (custom le label)**/
     display: block;
     position: relative;
     cursor: pointer;
@@ -6,30 +6,27 @@
     user-select: none;
 }
 /**container innput (cacher la checkbox par defaut du navigateur**/
-.like input{
+.vote-for input{
     position:absolute;
     opacity: 0;
     cursor: pointer;
     height: 0;
     width: 0;
 }
-.unlove{ /**créer une checkbox custom**/
+.unlike{ /**créer une checkbox custom**/
     position: absolute;
     color: rgb(0, 0, 0);
     background-color: $main-bg-color;
+    opacity: 1;
+    transition: opacity 1000ms;
 }
 /*When the checkbox is checked, make disappear the empty heart and appear the filled one*/
-.like input:checked~.unlove{
-    display: none;   
+.vote-for input:checked~.unlike{
+    opacity: 0; 
+    transition: opacity 1s;
 }
 /* Defines the color of the heart*/
-.love{
+.like{
     color: $gradient-main-color;
-}
-/* Create the checkmark/indicator (hidden when not checked) */
-.fa-heart:after{
-    content:"";
-    position: absolute;
-    display: none;
 }
 

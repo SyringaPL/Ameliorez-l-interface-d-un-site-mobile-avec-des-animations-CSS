@@ -125,7 +125,7 @@ main {
 }
 
 /*Couleur de la coche sur le menu pour commander*/
-.green-halo i {
+.halo i {
   background-color: #99E2D0;
   margin: 2px;
   padding: 2px;
@@ -134,12 +134,11 @@ main {
   background-color: #ffffff;
 }
 
-.green-halo {
+.halo {
   background-color: #99E2D0;
   padding: 26px;
   border-radius: 0 20px 20px 0;
   margin-left: 16px;
-  /***position: absolute;******************************************/
   height: auto;
 }
 
@@ -296,7 +295,7 @@ li .user-guide {
   border-radius: 20px 20px 0px 0px;
 }
 
-.like {
+.vote-for {
   display: flex;
   align-self: center;
   color: #353535;
@@ -323,7 +322,7 @@ li .user-guide {
 .restaurants_menu_entree {
   border-bottom-style: solid;
   border-bottom-color: #99E2D0;
-  width: 12%;
+  width: 2.5em;
   font-family: "roboto";
   font-style: light;
   font-weight: 300;
@@ -332,7 +331,7 @@ li .user-guide {
 .restaurants_menu_hot-dishes {
   border-bottom-style: solid;
   border-bottom-color: #99E2D0;
-  width: 12%;
+  width: 2.5em;
   font-family: "roboto";
   font-style: light;
   font-weight: 300;
@@ -341,7 +340,7 @@ li .user-guide {
 .restaurants_menu_dessert {
   border-bottom-style: solid;
   border-bottom-color: #99E2D0;
-  width: 12%;
+  width: 2.5em;
   font-family: "roboto";
   font-style: light;
   font-weight: 300;
@@ -362,8 +361,6 @@ li .user-guide {
   display: flex;
   flex-direction: row;
   align-items: end;
-  margin: 5px;
-  /*position: relative;*******/
 }
 .restaurants_menu_list_details {
   margin-left: 10px;
@@ -415,7 +412,7 @@ li .user-guide {
   margin-right: 10px;
 }
 
-.like { /**container (custom le label)**/
+.vote-for { /**container (custom le label)**/
   display: block;
   position: relative;
   cursor: pointer;
@@ -424,7 +421,7 @@ li .user-guide {
 }
 
 /**container innput (cacher la checkbox par defaut du navigateur**/
-.like input {
+.vote-for input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -432,27 +429,23 @@ li .user-guide {
   width: 0;
 }
 
-.unlove { /**créer une checkbox custom**/
+.unlike { /**créer une checkbox custom**/
   position: absolute;
   color: rgb(0, 0, 0);
   background-color: #ffffff;
+  opacity: 1;
+  transition: opacity 1000ms;
 }
 
 /*When the checkbox is checked, make disappear the empty heart and appear the filled one*/
-.like input:checked ~ .unlove {
-  display: none;
+.vote-for input:checked ~ .unlike {
+  opacity: 0;
+  transition: opacity 1s;
 }
 
 /* Defines the color of the heart*/
-.love {
+.like {
   color: #9356DC;
-}
-
-/* Create the checkmark/indicator (hidden when not checked) */
-.fa-heart:after {
-  content: "";
-  position: absolute;
-  display: none;
 }
 
 /*Tentative de creation d'un cube*/
@@ -466,7 +459,7 @@ li .user-guide {
   height: 200px;
   margin: 60px auto 40px; /*pour centrer le cube sur la page*/
   transform-style: preserve-3d;
-  transition: transform 2s;
+  transition: transform 3s;
   transform: translateZ(-100px) rotateX(-220deg) rotateY(45deg);
 }
 

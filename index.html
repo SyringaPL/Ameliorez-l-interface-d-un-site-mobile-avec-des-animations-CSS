@@ -27,7 +27,18 @@
     <title>Homepage</title>
 </head>
 <body>
-    <div class="main-container">
+    <!--Loader : cube qui tourne-->           
+    <div class="dice">
+        <div class="cube">
+            <div class="front"> <img src="./assets/images/viande.webp"></div>
+            <div class="back"><img src="./assets/images/légume.webp"></div>
+            <div class="left"><img src="./assets/images/saumon.webp"></div>
+            <div class="right"><img src="./assets/images/aromates.webp"></div>
+            <div class="top"><img src="./assets/images/dessert.webp"></div>
+            <div class="bottom"><img src="./assets/images/politique_qualite.webp"></div>
+        </div>
+    </div>
+    <div class="main-container homepage">
         <header>
             <div class="logo">
                 Ohmyfood
@@ -35,17 +46,6 @@
         </header>
 
         <main>
-<!--Loader : cube qui tourne-->           
-            <div class="dice">
-                <div class="cube">
-                    <div class="front"> <img src="./assets/images/viande.webp"></div>
-                    <div class="back"><img src="./assets/images/légume.webp"></div>
-                    <div class="left"><img src="./assets/images/saumon.webp"></div>
-                    <div class="right"><img src="./assets/images/aromates.webp"></div>
-                    <div class="top"><img src="./assets/images/dessert.webp"></div>
-                    <div class="bottom"><img src="./assets/images/politique_qualite.webp"></div>
-                </div>
-            </div>
 
 <!--input recherche ville avec Paris, Belleville-->
             <div class="localisation">
@@ -87,10 +87,10 @@
                             <p class="restaurants_cards_subtitle">Ménilmontant</p> 
                         </div>
 <!--coeur à cocher qui se remplit au clic et se vide au reclic-->
-                        <label class="like">
-                            <input type="checkbox" checked="checked">
-                            <span class="fa-regular fa-heart unlove"></span>
-                            <span class="fa-solid fa-heart love"></span>
+                        <label class="vote-for">
+                            <input type="checkbox">
+                            <span class="fa-regular fa-heart unlike"></span>
+                            <span class="fa-solid fa-heart like"></span>
                         </label>
                     </article>
 
@@ -103,10 +103,10 @@
                             <h3 class="restaurants_cards_title"><a href="./Restaurants/la_note_enchantee.html"target="_blank">La note enchantée</h3></a>
                             <p class="restaurants_cards_subtitle">Charonne</p>
                         </div>
-                        <label class="like">
-                            <input type="checkbox" checked="checked">
-                            <span class="fa-regular fa-heart unlove"></span>
-                            <span class="fa-solid fa-heart love"></span>
+                        <label class="vote-for">
+                            <input type="checkbox">
+                            <span class="fa-regular fa-heart unlike"></span>
+                            <span class="fa-solid fa-heart like"></span>
                         </label>
                     </article>
 
@@ -116,10 +116,10 @@
                             <h3 class="restaurants_cards_title"><a href="./Restaurants/a_la_francaise.html"target="_blank">A la française</h3></a>
                             <p class="restaurants_cards_subtitle">Cité Rouge</p>
                         </div>
-                        <label class="like">
-                            <input type="checkbox" checked="checked">
-                            <span class="fa-regular fa-heart unlove"></span>
-                            <span class="fa-solid fa-heart love"></span>
+                        <label class="vote-for">
+                            <input type="checkbox">
+                            <span class="fa-regular fa-heart unlike"></span>
+                            <span class="fa-solid fa-heart like"></span>
                         </label>
                     </article>
 
@@ -129,10 +129,10 @@
                             <h3 class="restaurants_cards_title"><a href="./Restaurants/le_delice_des_sens.html"target="_blank">Le délice des sens</h3></a>
                             <p class="restaurants_cards_subtitle">Folie-Méricourt</p>
                         </div>
-                        <label class="like">
-                            <input type="checkbox" checked="checked">
-                            <span class="fa-regular fa-heart unlove"></span>
-                            <span class="fa-solid fa-heart love"></span>
+                        <label class="vote-for">
+                            <input type="checkbox">
+                            <span class="fa-regular fa-heart unlike"></span>
+                            <span class="fa-solid fa-heart like"></span>
                         </label>
                     </article>
                 </div>

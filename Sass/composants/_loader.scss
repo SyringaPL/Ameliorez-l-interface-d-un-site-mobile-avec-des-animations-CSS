@@ -2,13 +2,14 @@
 .dice {
 	perspective: 800px;
 }
+
 .cube {
 	position: relative;
 	width: 200px;
     height: 200px;
     margin: 60px auto 40px;/*pour centrer le cube sur la page*/
 	transform-style: preserve-3d;
-    transition: transform 2s;
+    transition: transform 3s;
     transform: translateZ(-100px) rotateX(-220deg) rotateY(45deg);
 }
 .cube img{
