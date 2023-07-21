@@ -448,16 +448,13 @@ li .user-guide {
   color: #9356DC;
 }
 
-/*Tentative de creation d'un cube*/
-.dice {
-  perspective: 800px;
-}
-
+/*Creation d'un cube tournant en tant que loader*/
+/*Le cube qui tourne*/
 .cube {
-  position: relative;
+  position: absolute;
   width: 200px;
   height: 200px;
-  margin: 60px auto 40px; /*pour centrer le cube sur la page*/
+  margin: 15em 6em; /*pour centrer le cube sur la page*/
   transform-style: preserve-3d;
   transition: transform 3s;
   transform: translateZ(-100px) rotateX(-220deg) rotateY(45deg);
@@ -474,6 +471,7 @@ li .user-guide {
   height: 200px;
 }
 
+/*Paramétrage du cube rotatif*/
 .front {
   transform: translateZ(100px);
 }
@@ -498,8 +496,18 @@ li .user-guide {
   transform: rotateX(-90deg) translateZ(100px);
 }
 
-.cube {
-  animation: play-dice 3s infinite ease-in;
+.dice {
+  perspective: 800px;
+  opacity: 1;
+  animation: play-dice 3s ease-in;
+  animation: stop-play 500ms 2500ms;
+  animation-fill-mode: forwards;
+}
+
+.homepage {
+  opacity: 0;
+  animation: play 500ms 2500ms ease-in;
+  animation-fill-mode: forwards;
 }
 
 /*Animation du cube*/
@@ -509,6 +517,24 @@ li .user-guide {
   }
   100% {
     transform: translateZ(-100px) rotateX(360deg) rotateY(360deg);
+  }
+}
+/*Fin de l'animation du cube*/
+@keyframes stop-play {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/*Apparition du reste du site*/
+@keyframes play {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 /* Zone de saisie pour la localisation */
