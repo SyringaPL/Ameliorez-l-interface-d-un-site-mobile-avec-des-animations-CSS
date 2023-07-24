@@ -1,15 +1,15 @@
 @charset "UTF-8";
-/* Police du titre de la société*/
-/********************** Regroupement des polices répétitives mobile-first sous forme de mixin *****************/
+/******************Regroupement des polices répétitives mobile-first sous forme de mixin********************/
+/* Titre de la société*/
 /*************** Regroupement des polices répétitives desktop sous forme de mixin********************/
-/*Le logo*/
+/* Titre de la société*/
 /*Les titres desktop*/
 /*Les sous-titres desktop*/
 /*Police de présentation concept + partie du footer*/
 /*Mixin pour regrouper toutes les caractéristiques du gros bouton rose !*/
 /**Raccourci du bouton "explorer nos restaurants (gros bouton rose)"**/
 /**raccourci de la liste mode de fonctionnement du site**/
-/*Tentative de mixin pour media queries à revoir*/
+/*************Tentative de mixin pour media queries à revoir*****************/
 body {
   margin: 0px;
   background-color: #ffffff;
@@ -233,13 +233,6 @@ li .user-guide {
   font-weight: 700;
   font-size: 24px;
 }
-@media screen and (min-width: 768px) {
-  .restaurants_list_title {
-    font-style: bold;
-    font-size: 40px;
-  }
-}
-
 .restaurants_list h2 {
   width: 100%;
 }
@@ -569,6 +562,43 @@ div.localisation {
   display: flex;
   width: 36%;
   justify-content: center;
+}
+
+/*Tentative d'effet slide fondu enchainé*/
+/*Apparition au chargement des catégories du menu, dans l'ordre*/
+@keyframes opacity-entree {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes bcg {
+  0% {
+    background-color: #FF79DA;
+  }
+  33% {
+    background-color: #9356DC;
+  }
+  66% {
+    background-color: #008766;
+  }
+  100% {
+    background-color: #99E2D0;
+  }
+}
+/*Animation de fond de carte coloré*/
+.entrees {
+  animation: opacity-entree 2000ms ease-in-out, bcg 2000ms ease-in-out;
+}
+
+.hot-dishes {
+  animation: opacity-entree 2000ms 2000ms backwards, bcg 2000ms 2000ms ease-in;
+}
+
+.desserts {
+  animation: opacity-entree 2000ms 4000ms backwards, bcg 2000ms 4000ms ease-in;
 }
 
 header {

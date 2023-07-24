@@ -1,11 +1,12 @@
-/* Police du titre de la société*/
+/******************Regroupement des polices répétitives mobile-first sous forme de mixin********************/
+
+/* Titre de la société*/
 @mixin logo-header{
     font-family: 'shrikhand';
     font-style: italic;
     font-weight: 400;
     font-size: 30px;
 }
-/********************** Regroupement des polices répétitives mobile-first sous forme de mixin *****************/
 @mixin presentation-h1{
     font-family: 'Roboto';
     font-style: normal;
@@ -36,7 +37,6 @@
     font-weight: 400;
     font-size: 18px;
 }
-
 @mixin under-light{
     border-bottom-style: solid;
     border-bottom-color:$miscellanius-bg-color;
@@ -45,19 +45,9 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 /*************** Regroupement des polices répétitives desktop sous forme de mixin********************/
-/*Le logo*/
+
+/* Titre de la société*/
 @mixin logo-desktop{
     font-family: 'shrikhand';
     font-style: bold;
@@ -166,15 +156,14 @@
 
 
 
-/*Tentative de mixin pour media queries à revoir*/
+/*************Tentative de mixin pour media queries à revoir*****************/
 @mixin tablet-only {
     @media screen and (min-width: map-get($breakpoints,tablet)){
-        font-style: bold;
-        font-size: 40px;
+        @content;
     }
 }
 @mixin desktop-only {
     @media screen and (max-width: map-get($breakpoints,desktop)){
-        @content
+        @content;
     }
 }
