@@ -47,6 +47,7 @@
             }
         }
     }
+    /*Etiquette "nouveau"*/
 .new{
     background-color: $miscellanius-bg-color;
     color: $miscellanius-police-color;
@@ -101,18 +102,19 @@
         
         &_price{
             display: flex;
-            flex-direction: row;
             align-items:end;
+            justify-items: flex-end;
         }
         &_details{
             margin-left: 10px;
-            /*3 petits points + disparition texte trop long => ne fonctionne pas !*/
+            /**3 petits points + disparition texte trop long => ne fonctionne pas !**/
             white-space: nowrap;
-            overflow: hidden;
             text-overflow: ellipsis;
+            overflow: hidden;
         }
     }
 }
+
 .restaurants_menu > h3{
     margin-left: 25px;
     
@@ -130,10 +132,13 @@
     @include plates-close-one;   
 }
 .restaurants_menu_list_price p{
-    margin-left:15px;
-    
+    margin: 0 20px;
+    padding: 0 10px;
+   /* background:white;*/
 }
-
+.restaurants_menu ~h3{
+    margin-left: 250px;
+}
 
 
 .restaurant_menu{

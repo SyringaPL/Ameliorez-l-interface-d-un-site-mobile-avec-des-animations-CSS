@@ -55,26 +55,7 @@
 .fa-regular{
     color: #9356DC;
 }
-/*Couleur de la coche sur le menu pour commander*/
 
-.halo i{
-    background-color: $miscellanius-bg-color;
-    margin: 2px;
-    padding:2px;
-    border-radius: 50%;
-    color: $miscellanius-bg-color;
-    background-color: $main-bg-color;
-}
-.halo{
-    background-color: $miscellanius-bg-color;
-    padding: 26px;
-    border-radius: 0 20px 20px 0;
-    margin-left: 16px;  
-    height: auto;
-}
-.restaurants_menu ~h3{
-    margin-left: 250px;
-}
 /*Police de caractère du nom du restaurant*/
 .restaurants_name h1{
     margin-left: -10px;

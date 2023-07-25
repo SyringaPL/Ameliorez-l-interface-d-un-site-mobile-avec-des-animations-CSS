@@ -1,0 +1,26 @@
+/*Tentative d'effet slide fondu enchainé*/
+
+
+/*Apparition au chargement des catégories du menu, dans l'ordre*/
+@keyframes opacity-entree{
+    0% {opacity: 0;}
+    100% {opacity:1;}
+}
+/*Apparition au chargement du fond coloré derrière les catégories*/
+@keyframes bcg{
+    0% {background-color: $gradient-second-color}
+    33% {background-color: $gradient-main-color;}
+    66% {background-color: $miscellanius-police-color;}
+    100% {background-color: $miscellanius-bg-color;}
+}
+/*Animation : apparition des plats avec un fond de carte coloré*/
+
+.entrees{
+    animation: opacity-entree 2000ms ease-in-out, bcg 2000ms ease-in-out;   
+}
+.hot-dishes{
+    animation: opacity-entree 2000ms 1300ms backwards, bcg 2000ms 1300ms ease-in;
+}
+.desserts{
+    animation: opacity-entree 2000ms 2600ms backwards, bcg 2000ms 2600ms ease-in;
+}

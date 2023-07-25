@@ -1,27 +1,99 @@
-/*Tentative d'effet slide fondu enchainé*/
+/*Couleur de la coche sur le menu pour commander*/
 
-
-/*Apparition au chargement des catégories du menu, dans l'ordre*/
-@keyframes opacity-entree{
-    0% {opacity: 0;}
-    100% {opacity:1;}
+.halo i{
+    background-color: $miscellanius-bg-color;
+    padding:5px;
+    border-radius: 50%;
+    color: $miscellanius-bg-color;
+    background-color: $main-bg-color;
 }
 
-@keyframes bcg{
-    0% {background-color: $gradient-second-color}
-    33% {background-color: $gradient-main-color;}
-    66% {background-color: $miscellanius-police-color;}
-    100% {background-color: $miscellanius-bg-color;}
-}
 
-/*Animation de fond de carte coloré*/
+.halo{
+    background-color: $miscellanius-bg-color;
+    border-radius: 0 20px 20px 0;
+    padding: 19px 19px;  
+    height: auto;
+    display: inline-block;
+}
+/*tentative de sliders sur l'icone de commande*/
 
-.entrees{
-    animation: opacity-entree 2000ms ease-in-out, bcg 2000ms ease-in-out;   
-}
-.hot-dishes{
-    animation: opacity-entree 2000ms 2000ms backwards, bcg 2000ms 2000ms ease-in;
-}
-.desserts{
-    animation: opacity-entree 2000ms 4000ms backwards, bcg 2000ms 4000ms ease-in;
-}
+
+/*****************************************************************/
+/* The switch - the box around the slider */
+.switch { /*le fond du bouton qui disparait quand le slider est fermé*/
+    position: relative;
+    display: inline-block;
+    width: 120px;
+    height: 61px;
+    overflow: hidden;
+    border-radius: 0px 20px 20px 0px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider = ce qu'il se passe lorsque l'on clique sur le bouton*/
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: main-bg-color;
+    border-radius: 0 20px 20px 0;
+    align-items: center;
+    padding: 19px 19px;  
+    margin-left: 40px;
+    transition: 0.5s ease-in-out;
+
+      &:before {/*switch on/off qui bouge sur l'interface*/
+        position: absolute;
+        content: "";
+        height: 60px;
+        width: 100px;
+        left: 0px;
+        bottom: 0px;
+        transition: 0.5s ease-in-out;
+    }
+  }
+
+  .slider i{
+    padding:2px;
+    border-radius: 50%;
+    color: $miscellanius-bg-color;
+    background: $main-bg-color;
+    z-index: 2;
+  }
+
+
+  input:checked + .slider {
+    margin-left: -50px;
+  }
+  
+  input:checked + .slider::before {
+    /*-webkit-transform: translateX(100px);
+    -ms-transform: translateX(100px);*/
+    transform: translateX(100px);
+    background-color: $miscellanius-bg-color;
+    transition: translateX 0.5s 0.5s ease-in-out;
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 0px 20px 20px 0px;
+  }
+  
+  .slider.round:before {
+    border-radius: 0px 20px 20px 0px;
+  }
+
+

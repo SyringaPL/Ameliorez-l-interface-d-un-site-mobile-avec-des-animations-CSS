@@ -38,6 +38,7 @@
 .bottom {
 	transform: rotateX(-90deg) translateZ(100px);
 }
+/*Il tourne, il tourne...puis il s'arrête*/
 .dice{
 	perspective: 800px;
 	opacity: 1;
@@ -45,6 +46,7 @@
 	animation: stop-play 500ms 2500ms;
 	animation-fill-mode: forwards;
 }
+/*le main-conteneur : apparition progressive après le cube*/
 .homepage{
 	opacity: 0;
 	animation:play 500ms 2500ms ease-in;
