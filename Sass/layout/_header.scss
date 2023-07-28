@@ -10,8 +10,17 @@ header{
     padding-bottom: 15px;
     @include logo-header;
     width: 95%;
-    justify-content: center;
     display: flex;
+    justify-content: center;
+    @include tablet-only{
+        @include logo-desktop;
+        width: 100%;
+    }
+    @include desktop-only{
+        @include logo-desktop;
+        width: 100%;
+    }
+
     }
 
 .return{

@@ -32,8 +32,8 @@
     font-size: 16px;
 }
 @mixin logo-footer{
-    font-family: 'shrikhand';
-    font-style: regular;
+    font-family:'Shrikhand',cursive;
+    font-style: unset;
     font-weight: 400;
     font-size: 18px;
 }
@@ -50,10 +50,16 @@
 /* Titre de la société*/
 @mixin logo-desktop{
     font-family: 'shrikhand';
-    font-style: bold;
+    font-style: unset; 
+    font-size: 35px;
+    padding: 30px 0;
+}
+/* Présentation desktop*/
+@mixin presentation-h1-desktop{
+    font-family: 'roboto';
+    font-size: 40px;
+    font-style: normal;
     font-weight: 700;
-    font-size: 50px;
-/**************Verifier l'aspect*************************/
 }
 /*Les titres desktop*/
 @mixin desktop-titles{
@@ -64,15 +70,15 @@
 }
 /*Les sous-titres desktop*/
 @mixin desktop-subtitles{
-    font-family: 'roboto';
-    font-style: light;
+    font-family: 'roboto',sans-serif;
+    font-style: unset;
     font-weight: 300;
     font-size: 18px;
 }
 /*Police de présentation concept + partie du footer*/
 @mixin desktop-btn{
-    font-family: 'roboto';
-    font-style: medium;
+    font-family: 'roboto',medium;
+    font-style: unset;
     font-weight: 500;
     font-size: 16px;
 }
@@ -81,27 +87,35 @@
 }
 /*Mixin pour regrouper toutes les caractéristiques du gros bouton rose !*/
 
+/*Bouton de base*/
 @mixin btn{
-    padding: 15px 18px;
+    padding: 18px;
     width: fit-content;
     display: inline-block;
 }
+/*bouton modifié*/
 @mixin btn--modif{
     display: flex;
 }
+/*Bouton coloré*/
 @mixin btn_color{
     background: $gradient;
     color: $main-bg-color;
 }
+/*Bouton arrondi*/
 @mixin btn-rounded{
-    border-radius: 40px;
+    border-radius: 25px;
 }
+/*Bouton carré*/
 @mixin btn_square{
     border-radius:20px;
 }
+/*Bouton ombré*/
 @mixin btn_sshadows{
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);   
+    /*box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25); */ 
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15); 
 }
+/*Bouton modif 2*/
 @mixin btn_modif{
     width: 80%;
     margin: 15px 0px;
@@ -115,18 +129,20 @@
     @include btn_rounded;
     @include btn_sshadows;
 }
-/**raccourci de la liste mode de fonctionnement du site**/
+/**raccourcis de la liste mode de fonctionnement du site**/
 @mixin square{
     @include btn;
     @include btn_square;
     @include btn_sshadows;
     @include btn_modif;
 }
+/*Raccourcis des "boutons" de la liste de plats "restaurant.html"*/
 @mixin square-two{
     @include btn--modif;
     @include btn_square;
     @include btn_sshadows;
 }
+/*mixin qui paramètre le titre d'une page "restaurant.html" */
 @mixin menu{
     @include btn--modif;
     background-color: $main-bg-color;
@@ -134,20 +150,20 @@
     margin-top: -45px;
 }
 @mixin restaurant-police-title{
-    font-family: 'shrikhand';
-    font-style: regular;
+    font-family: 'shrikhand',cursive;
+    font-style: unset;
     font-weight: 400;
     font-size: 28px;
 }
 @mixin plates-names{
-    font-family: 'roboto';
-    font-style: medium;
+    font-family: 'roboto',medium;
+    font-style: unset;
     font-weight: 500;
     font-size: 18px;
 }
 @mixin plates-close-one{
-    font-family: 'roboto';
-    font-style: light;
+    font-family: 'roboto',sans-serif;
+    font-style: unset;
     font-weight: 300;
     font-size: 15px;
 }
@@ -163,7 +179,7 @@
     }
 }
 @mixin desktop-only {
-    @media screen and (max-width: map-get($breakpoints,desktop)){
+    @media screen and (min-width: map-get($breakpoints,desktop)){
         @content;
     }
 }

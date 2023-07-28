@@ -45,6 +45,10 @@
     animation: play-dice 3s ease-in;
 	animation: stop-play 500ms 2500ms;
 	animation-fill-mode: forwards;
+	@include tablet-only {
+		display: flex;
+		justify-content: center;
+	}
 }
 /*le main-conteneur : apparition progressive après le cube*/
 .homepage{

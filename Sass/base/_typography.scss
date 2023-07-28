@@ -6,9 +6,27 @@
     align-items: center;
     justify-content: center;
     padding: 15px;
+    padding-left: 180px;
+    padding-right: 180px;
+    margin-bottom: 40px;
+    @include tablet-only{
+        margin-bottom: 3px
+    }
+    @include desktop-only{
+        margin-bottom: 3px
+    }
     h1{
         @include presentation-h1;
         margin: 20px;
+        @include tablet-only{
+            @include presentation-h1-desktop;
+            margin-bottom: 30px;
+            font-size:31px;
+            }
+        @include desktop-only{
+            @include presentation-h1-desktop;
+            margin-bottom: 30px
+            }
         }
     p{
         @include presentation-p;
@@ -18,23 +36,47 @@
         }
     a{
         text-decoration-line:none;
+        margin: 12px;
     }
 }
 
 /** Présentation du fonctionnement du concept**/
 .sorting{
-    margin-top: 7rem;
+    margin-top: 50px;
     padding: 15px;
+    @include tablet-only{
+        margin-top: 5px;
+        padding-left: 180px;
+        padding-right: 180px;
+        margin-bottom: 19px;
+    }
+    @include desktop-only{
+        margin-top: 5px;
+        padding-left: 180px;
+        padding-right: 180px;
+        margin-bottom: 19px;
+    }
     .sorting li{
         background-color: $main-bg-color;
         border-color: $second-bg-color;
-        color: $main-police-color;
+        color: $main-police-color;        
     }
     .sorting_title{
         @include presentation-h1;
     }
 }
 /** Définission des couleurs de la présentation du fonctionnement **/
+.sorting_box{
+    @include tablet-only{
+        display: flex;
+        justify-content: space-between;
+    }
+    @include desktop-only{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+}
 .sorting_box i{
     color: $main-police-color;
     margin-right: 25px;

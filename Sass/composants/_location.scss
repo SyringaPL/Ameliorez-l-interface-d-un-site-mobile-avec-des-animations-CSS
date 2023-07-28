@@ -8,7 +8,7 @@ input{
     width: 80%;
     }
 /* Bloc définissant la zone de saisie de la localisation */ 
-.localisation{
+.location{
     background-color: $second-bg-color;
     width: 100%;
     display: flex;
@@ -16,12 +16,21 @@ input{
     padding-top: 15px;
     padding-bottom: 15px;
     @include shadow;
+    @include tablet-only{
+        box-shadow: none;
     }
-div.localisation{
-    border-top: solid $gradient ;
+    @include desktop-only{
+        box-shadow: none;
     }
-.form{
+    }
+
+form{
     display: flex;
-    width: 36%;
+    width: 136%;
     justify-content: center;
     }
+form .label{
+    display: flex;
+    justify-content: center;
+}
+    

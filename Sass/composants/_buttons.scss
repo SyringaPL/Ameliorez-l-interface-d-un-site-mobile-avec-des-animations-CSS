@@ -4,8 +4,8 @@ ul{
     display: flex;
     flex-direction: column;
     align-items: center;
-    @media (min-width: 765px) {
-        flex-direction: row;
+    @include desktop-only{
+        justify-content: space-between;
     }
 }
 /**Test de puce sur bouton**/
@@ -32,9 +32,10 @@ li .user-guide{
 /**raccourci de la liste mode de fonctionnement du site**/
 .square{
     @include square;
+    @include desktop-only{
+        width: 28%;
+    }
 }
-
-
 /**Flèche Retour**/
 .return a:visited{
     color: $main-police-color;

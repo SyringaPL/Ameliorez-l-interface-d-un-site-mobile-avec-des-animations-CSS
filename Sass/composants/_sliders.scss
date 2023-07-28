@@ -1,25 +1,5 @@
-/*Couleur de la coche sur le menu pour commander*/
-
-.halo i{
-    background-color: $miscellanius-bg-color;
-    padding:5px;
-    border-radius: 50%;
-    color: $miscellanius-bg-color;
-    background-color: $main-bg-color;
-}
-
-
-.halo{
-    background-color: $miscellanius-bg-color;
-    border-radius: 0 20px 20px 0;
-    padding: 19px 19px;  
-    height: auto;
-    display: inline-block;
-}
 /*tentative de sliders sur l'icone de commande*/
 
-
-/*****************************************************************/
 /* The switch - the box around the slider */
 .switch { /*le fond du bouton qui disparait quand le slider est fermé*/
     position: relative;
@@ -48,10 +28,10 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-color: main-bg-color;
+    background-color: $main-bg-color;
     border-radius: 0 20px 20px 0;
     align-items: center;
-    padding: 19px 19px;  
+    /*padding: 19px 19px;*/  
     margin-left: 40px;
     transition: 0.5s ease-in-out;
 
@@ -74,17 +54,17 @@
     z-index: 2;
   }
 
-
+/*Ce qu'il se passe lorsque la case est cochée le slider bouge*/
   input:checked + .slider {
     margin-left: -50px;
   }
   
   input:checked + .slider::before {
-    /*-webkit-transform: translateX(100px);
-    -ms-transform: translateX(100px);*/
-    transform: translateX(100px);
-    background-color: $miscellanius-bg-color;
+    /*-webkit-transform: translateX(110px);
+    -ms-transform: translateX(110px);*/
+    transform: translateX(110px);
     transition: translateX 0.5s 0.5s ease-in-out;
+    background-color: $miscellanius-bg-color;
   }
   
   /* Rounded sliders */
@@ -95,5 +75,7 @@
   .slider.round:before {
     border-radius: 0px 20px 20px 0px;
   }
-
+.slider .dish_price{
+  margin: 20px 40px;
+}
 

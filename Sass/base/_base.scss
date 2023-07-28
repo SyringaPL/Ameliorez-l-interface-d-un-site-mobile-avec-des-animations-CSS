@@ -2,9 +2,10 @@ body{
     margin: 0px;  
     background-color: $main-bg-color;
     }
-/* Bloc qui permet l'affichage avec une largeur max sur grand écran */
+
 .main-container{
     width: 100vw;
+    /*affichage avec une largeur max sur grand écran */
     @media (min-width: 1400px) {
         width: 1400px;
     }
