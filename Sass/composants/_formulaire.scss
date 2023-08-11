@@ -1,0 +1,119 @@
+/**Formulaire de commande**/
+.dish{
+    /*Mise en forme en rectangle, façon boutons carrés*/
+    @include square-two;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+    /*align-items:last baseline;*/
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    margin: 10px 15px;
+    &_title{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 15px;
+        @include tablet-only{
+            width: 200%;
+        }
+        @include desktop-only{
+            width: 200%;
+        }
+        }
+    &_price{
+        display: flex;
+        align-items: flex-end;
+        width: 10%;
+        margin-right: 15px;
+        margin-bottom: 15px;
+        @include tablet-only{
+            width: auto;
+        }
+        @include desktop-only{
+            width: auto;
+        }
+      }
+    &_select{
+        width: 0px;
+        height: 0px;
+        background-color: $miscellanius-bg-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        white-space: nowrap;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in-out;
+      }
+    }
+.dish input[type=checkbox]{
+    opacity: 0;
+    width: 0px;
+    height:0px;
+    margin: 0;
+    /*Permet que le texte ne soit pas décallé au clic*/
+    position: absolute;
+    }
+/*Icone "check"*/
+.dish_select .fa-check{
+    color: $miscellanius-bg-color;
+    background-color: white;
+    border-radius: 50%;
+    padding:5px;
+    }
+.title{
+    font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    @include plates-names;
+}
+.subtitle{
+    font-weight: lighter;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    @include plates-close-one;
+}
+
+/*Quand la case est cochée, la colonne du titre rétrécit*/
+.dish input[type=checkbox]:checked ~.dish_title{
+    width: 58%;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out; 
+    @include tablet-only{
+        width: 200%;
+    }
+    @include desktop-only{
+        width: 200%;
+    }
+}
+.dish input[type=checkbox]:checked ~ .dish_select{
+    width: 20%;
+    height: auto;
+    transition: 0.3s ease-in-out;
+    @include tablet-only{
+        width: 30%;
+    }
+    @include desktop-only{
+        width: 15%;
+    }
+}
+/*Alignement des rubriques "entrées", "plats chaud" et "dessert"*/
+.restaurants_menu_entree,
+.restaurants_menu_hot-dishes,
+.restaurants_menu_dessert{
+    margin-left: 15px;
+}
+.commande{
+    @include tablet-only{
+        width: 75%;
+    }
+    @include desktop-only{
+        width: 70%;
+    }
+}

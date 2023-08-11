@@ -10,11 +10,11 @@
     }   
     @include tablet-only{
         margin-top: 11px;
-        padding: 0 180px;
+        width: 568px;
     }    
     @include desktop-only{
         margin-top: 11px;
-        padding: 0 180px;
+        width: 1000px;
     }
 }
 .restaurants_list h2{
@@ -81,7 +81,7 @@
             }
         }
     }
-    /*Etiquette "nouveau"*/
+/*****Etiquette "nouveau"*********/
 .new{
     background-color: $miscellanius-bg-color;
     color: $miscellanius-police-color;
@@ -101,17 +101,38 @@
     color: $main-police-color;
     font-size: 22px;
     }
-/*Mise en place du titre de la page et du vote (heart)*/
+/*****************************Présentation des PAGES restaurants************************************/
+
+/**titre de la page et du vote (heart)**/
 .restaurants_name{
     display: flex;
     justify-content: space-around;
     @include menu;
+    padding-top: 12px;
+    @include tablet-only{
+        width: 600px;
+        display: flex;
+        justify-content: center;
+    }
+    @include desktop-only{
+        width: 1000px;
+        display: flex;
+        justify-content: center;
+    }
 }
-/*Image de présentation des PAGES restaurants*/
+/**Image de présentation des PAGES restaurants**/
 .restaurants{
     display: flex;
     width: 100%;
     height: auto;
+    @include tablet-only{
+        width: 810px;
+        height: 410px;
+    }
+    @include desktop-only{
+        width: 1400px;
+        height: 573px
+    }
     /*La petite ligne verte sous le mot "Entrées"*/
     &_menu_entree {
         @include under-light;
@@ -125,55 +146,8 @@
         @include under-light;
         @include desktop-subtitles;
     }
-    &_menu_list{
-        /*Mise en forme en rectangle, façon boutons carrés*/
-        @include square-two;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: row;
-        /*taille des "boutons"*/
-        margin: 10px 15px;
-        
-        &_price{
-            display: flex;
-            align-items:end;
-            justify-items: flex-end;
-        }
-        &_details{
-            margin-left: 10px;  
-            white-space: nowrap;  
-            overflow: hidden; 
-            flex:1;   
-        }
-    }
 }
 
-.restaurants_menu > h3{
-    margin-left: 25px; 
-}
-/*h3 de la bulle entrées / plats / desserts*/
-.restaurants_menu_list_details >h3{
-    margin-left: 20px;
-    @include plates-names;
-    margin-top: 7px;
-    margin-bottom: 7px;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
-/*paragraphe de la bulle entrée / plat / dessert*/
-.restaurants_menu_list_details >p{
-    margin-left: 20px;
-    margin-top: 7px;
-    margin-bottom: 7px;
-    @include plates-close-one;  
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden; 
-}
-.restaurants_menu ~h3{
-    margin-left: 250px;
-}
 
 
 .restaurant_menu{

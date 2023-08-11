@@ -44,6 +44,16 @@ main {
   display: flex;
   flex-direction: column;
 }
+@media screen and (min-width: 768px) {
+  main {
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1400px) {
+  main {
+    align-items: center;
+  }
+}
 
 .order {
   margin-bottom: 25px;
@@ -67,8 +77,6 @@ main {
   align-items: center;
   justify-content: center;
   padding: 15px;
-  padding-left: 180px;
-  padding-right: 180px;
   margin-bottom: 40px;
 }
 @media screen and (min-width: 768px) {
@@ -79,6 +87,8 @@ main {
 @media screen and (min-width: 1400px) {
   .presentation {
     margin-bottom: 3px;
+    padding-left: 180px;
+    padding-right: 180px;
   }
 }
 .presentation h1 {
@@ -132,16 +142,14 @@ main {
 @media screen and (min-width: 768px) {
   .sorting {
     margin-top: 5px;
-    padding-left: 180px;
-    padding-right: 180px;
+    width: 568px;
     margin-bottom: 19px;
   }
 }
 @media screen and (min-width: 1400px) {
   .sorting {
     margin-top: 5px;
-    padding-left: 180px;
-    padding-right: 180px;
+    width: 1000px;
     margin-bottom: 19px;
   }
 }
@@ -162,6 +170,7 @@ main {
   .sorting_box {
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
   }
 }
 @media screen and (min-width: 1400px) {
@@ -200,11 +209,25 @@ main {
 
 /*Police de caractère du nom du restaurant*/
 .restaurants_name h1 {
-  margin-left: -10px;
+  margin-left: -15px;
   font-family: "shrikhand", cursive;
   font-style: unset;
   font-weight: 400;
   font-size: 28px;
+}
+@media screen and (min-width: 768px) {
+  .restaurants_name h1 {
+    display: flex;
+    justify-content: center;
+    margin-right: 25px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .restaurants_name h1 {
+    display: flex;
+    justify-content: center;
+    margin-right: 25px;
+  }
 }
 
 ul {
@@ -220,6 +243,7 @@ ul {
 @media screen and (min-width: 1400px) {
   ul {
     justify-content: space-between;
+    flex-direction: row;
   }
 }
 
@@ -240,9 +264,17 @@ li .user-guide {
   display: inline-block;
   background: linear-gradient(0deg, #9356DC -25%, #FF79DA 125%);
   color: #ffffff;
-  border-radius: 25px;
+  border-radius: 40px;
   /*box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25); */
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  /*modification de la taille du bouton*/
+  padding: 16px 50px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 .grosboutonrose:hover {
   filter: brightness(1.2);
@@ -254,7 +286,7 @@ li .user-guide {
   align-items: center;
 }
 
-/**raccourci de la liste mode de fonctionnement du site**/
+/**chaque étape de la liste mode de fonctionnement du site**/
 .square {
   padding: 18px;
   width: fit-content;
@@ -262,7 +294,6 @@ li .user-guide {
   border-radius: 20px;
   /*box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25); */
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-  width: 80%;
   margin: 15px 0px;
   border: none;
   padding: 24px 18px;
@@ -270,6 +301,8 @@ li .user-guide {
 @media screen and (min-width: 1400px) {
   .square {
     width: 28%;
+    width: fit-content;
+    justify-content: space-between;
   }
 }
 
@@ -295,13 +328,13 @@ li .user-guide {
 @media screen and (min-width: 768px) {
   .restaurants_list {
     margin-top: 11px;
-    padding: 0 180px;
+    width: 568px;
   }
 }
 @media screen and (min-width: 1400px) {
   .restaurants_list {
     margin-top: 11px;
-    padding: 0 180px;
+    width: 1000px;
   }
 }
 
@@ -389,7 +422,7 @@ li .user-guide {
   justify-content: right;
 }
 
-/*Etiquette "nouveau"*/
+/*****Etiquette "nouveau"*********/
 .new {
   background-color: #99E2D0;
   color: #008766;
@@ -412,22 +445,50 @@ li .user-guide {
   font-size: 22px;
 }
 
-/*Mise en place du titre de la page et du vote (heart)*/
+/*****************************Présentation des PAGES restaurants************************************/
+/**titre de la page et du vote (heart)**/
 .restaurants_name {
   display: flex;
   justify-content: space-around;
   display: flex;
   background-color: #ffffff;
-  border-radius: 25px;
+  border-radius: 40px;
   margin-top: -45px;
+  padding-top: 12px;
+}
+@media screen and (min-width: 768px) {
+  .restaurants_name {
+    width: 600px;
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .restaurants_name {
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+  }
 }
 
-/*Image de présentation des PAGES restaurants*/
+/**Image de présentation des PAGES restaurants**/
 .restaurants {
   display: flex;
   width: 100%;
   height: auto;
   /*La petite ligne verte sous le mot "Entrées"*/
+}
+@media screen and (min-width: 768px) {
+  .restaurants {
+    width: 810px;
+    height: 410px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .restaurants {
+    width: 1400px;
+    height: 573px;
+  }
 }
 .restaurants_menu_entree {
   border-bottom-style: solid;
@@ -456,65 +517,6 @@ li .user-guide {
   font-weight: 300;
   font-size: 18px;
 }
-.restaurants_menu_list {
-  /*Mise en forme en rectangle, façon boutons carrés*/
-  display: flex;
-  border-radius: 20px;
-  /*box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25); */
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-  /*taille des "boutons"*/
-  margin: 10px 15px;
-}
-.restaurants_menu_list_price {
-  display: flex;
-  align-items: end;
-  justify-items: flex-end;
-}
-.restaurants_menu_list_details {
-  margin-left: 10px;
-  white-space: nowrap;
-  overflow: hidden;
-  flex: 1;
-}
-
-.restaurants_menu > h3 {
-  margin-left: 25px;
-}
-
-/*h3 de la bulle entrées / plats / desserts*/
-.restaurants_menu_list_details > h3 {
-  margin-left: 20px;
-  font-family: "roboto", medium;
-  font-style: unset;
-  font-weight: 500;
-  font-size: 18px;
-  margin-top: 7px;
-  margin-bottom: 7px;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-
-/*paragraphe de la bulle entrée / plat / dessert*/
-.restaurants_menu_list_details > p {
-  margin-left: 20px;
-  margin-top: 7px;
-  margin-bottom: 7px;
-  font-family: "roboto", sans-serif;
-  font-style: unset;
-  font-weight: 300;
-  font-size: 15px;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-
-.restaurants_menu ~ h3 {
-  margin-left: 250px;
-}
 
 .restaurant_menu {
   padding: 18px;
@@ -523,7 +525,6 @@ li .user-guide {
   border-radius: 20px;
   /*box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25); */
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-  width: 80%;
   margin: 15px 0px;
   border: none;
   padding: 24px 18px;
@@ -567,7 +568,6 @@ li .user-guide {
   color: #9356DC;
 }
 
-/*Commander au restaurant*/
 /*Creation d'un cube tournant en tant que loader*/
 /*Le cube qui tourne*/
 .cube {
@@ -666,7 +666,7 @@ li .user-guide {
   }
 }
 /* Zone de saisie pour la localisation */
-input {
+.location-input {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
@@ -699,13 +699,13 @@ input {
   }
 }
 
-form {
+.location-form {
   display: flex;
   width: 136%;
   justify-content: center;
 }
 
-form .label {
+.location-form .label {
   display: flex;
   justify-content: center;
 }
@@ -720,112 +720,171 @@ form .label {
     opacity: 1;
   }
 }
-/*Apparition au chargement du fond coloré derrière les catégories*/
-@keyframes bcg {
-  0% {
-    background-color: #FF79DA;
-  }
-  33% {
-    background-color: #9356DC;
-  }
-  66% {
-    background-color: #008766;
-  }
-  100% {
-    background-color: #99E2D0;
-  }
-}
 /*Animation : apparition des plats avec un fond de carte coloré*/
 .entrees {
-  animation: opacity-entree 2000ms ease-in-out, bcg 2000ms ease-in-out;
+  animation: opacity-entree 2000ms ease-in-out;
 }
 
 .hot-dishes {
-  animation: opacity-entree 2000ms 1300ms backwards, bcg 2000ms 1300ms ease-in;
+  animation: opacity-entree 2000ms 1300ms backwards;
 }
 
 .desserts {
-  animation: opacity-entree 2000ms 2600ms backwards, bcg 2000ms 2600ms ease-in;
+  animation: opacity-entree 2000ms 2600ms backwards;
 }
 
-/*tentative de sliders sur l'icone de commande*/
-/* The switch - the box around the slider */
-.switch { /*le fond du bouton qui disparait quand le slider est fermé*/
-  position: relative;
-  display: inline-block;
-  width: 120px;
-  height: 61px;
-  overflow: hidden;
-  border-radius: 0px 20px 20px 0px;
-}
-
-/* Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-/* The slider = ce qu'il se passe lorsque l'on clique sur le bouton*/
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+/**Formulaire de commande**/
+.dish {
+  /*Mise en forme en rectangle, façon boutons carrés*/
+  display: flex;
+  border-radius: 20px;
+  /*box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25); */
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  background-color: #ffffff;
-  border-radius: 0 20px 20px 0;
-  align-items: center;
-  /*padding: 19px 19px;*/
-  margin-left: 40px;
-  transition: 0.5s ease-in-out;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  /*align-items:last baseline;*/
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  margin: 10px 15px;
 }
-.slider:before { /*switch on/off qui bouge sur l'interface*/
-  position: absolute;
-  content: "";
-  height: 60px;
-  width: 100px;
-  left: 0px;
-  bottom: 0px;
-  transition: 0.5s ease-in-out;
+.dish_title {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 15px;
 }
-
-.slider i {
-  padding: 2px;
-  border-radius: 50%;
-  color: #99E2D0;
-  background: #ffffff;
-  z-index: 2;
+@media screen and (min-width: 768px) {
+  .dish_title {
+    width: 200%;
+  }
 }
-
-/*Ce qu'il se passe lorsque la case est cochée le slider bouge*/
-input:checked + .slider {
-  margin-left: -50px;
+@media screen and (min-width: 1400px) {
+  .dish_title {
+    width: 200%;
+  }
 }
-
-input:checked + .slider::before {
-  /*-webkit-transform: translateX(110px);
-  -ms-transform: translateX(110px);*/
-  transform: translateX(110px);
-  transition: translateX 0.5s 0.5s ease-in-out;
+.dish_price {
+  display: flex;
+  align-items: flex-end;
+  width: 10%;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+@media screen and (min-width: 768px) {
+  .dish_price {
+    width: auto;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .dish_price {
+    width: auto;
+  }
+}
+.dish_select {
+  width: 0px;
+  height: 0px;
   background-color: #99E2D0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
 }
 
-/* Rounded sliders */
-.slider.round {
-  border-radius: 0px 20px 20px 0px;
+.dish input[type=checkbox] {
+  opacity: 0;
+  width: 0px;
+  height: 0px;
+  margin: 0;
+  /*Permet que le texte ne soit pas décallé au clic*/
+  position: absolute;
 }
 
-.slider.round:before {
-  border-radius: 0px 20px 20px 0px;
+/*Icone "check"*/
+.dish_select .fa-check {
+  color: #99E2D0;
+  background-color: white;
+  border-radius: 50%;
+  padding: 5px;
 }
 
-.slider .dish_price {
-  margin: 20px 40px;
+.title {
+  font-weight: bold;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-family: "roboto", medium;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.subtitle {
+  font-weight: lighter;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-family: "roboto", sans-serif;
+  font-style: unset;
+  font-weight: 300;
+  font-size: 15px;
+}
+
+/*Quand la case est cochée, la colonne du titre rétrécit*/
+.dish input[type=checkbox]:checked ~ .dish_title {
+  width: 58%;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+@media screen and (min-width: 768px) {
+  .dish input[type=checkbox]:checked ~ .dish_title {
+    width: 200%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .dish input[type=checkbox]:checked ~ .dish_title {
+    width: 200%;
+  }
+}
+
+.dish input[type=checkbox]:checked ~ .dish_select {
+  width: 20%;
+  height: auto;
+  transition: 0.3s ease-in-out;
+}
+@media screen and (min-width: 768px) {
+  .dish input[type=checkbox]:checked ~ .dish_select {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .dish input[type=checkbox]:checked ~ .dish_select {
+    width: 15%;
+  }
+}
+
+/*Alignement des rubriques "entrées", "plats chaud" et "dessert"*/
+.restaurants_menu_entree,
+.restaurants_menu_hot-dishes,
+.restaurants_menu_dessert {
+  margin-left: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .commande {
+    width: 75%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .commande {
+    width: 70%;
+  }
 }
 
 header {
@@ -868,14 +927,14 @@ header {
 
 .return {
   width: 8%;
+  margin-left: 15px;
 }
 
 footer {
-  width: 100%;
   height: auto;
   color: #ffffff;
   background-color: #353535;
-  padding: 14px;
+  padding: 22px 25px;
 }
 @media screen and (min-width: 768px) {
   footer {
@@ -904,7 +963,7 @@ footer {
 }
 @media screen and (min-width: 768px) {
   .logo-footer {
-    padding: 30px 25px;
+    padding: 25px 15px;
   }
 }
 @media screen and (min-width: 1400px) {
@@ -913,9 +972,12 @@ footer {
   }
 }
 
+.nav_footer {
+  margin-top: 16px;
+}
 @media screen and (min-width: 768px) {
   .nav_footer {
-    padding: 30px 25px;
+    padding: 30px 0px;
   }
 }
 @media screen and (min-width: 1400px) {
@@ -936,6 +998,7 @@ footer {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
+  color: #ffffff;
 }
 
 .nav_footer i {
@@ -960,17 +1023,19 @@ footer {
 }
 
 .ul_footer .partner {
-  width: 200px;
-  height: 20px;
+  width: auto;
+  padding: 0 5px;
 }
 
 .ul_footer .contact {
-  width: 135px;
+  width: auto;
   height: 20px;
+  padding: 2px 10px;
 }
 
 .ul_footer a {
   text-decoration: none;
+  color: #ffffff;
 }
 
 .ul_footer a:visited {
