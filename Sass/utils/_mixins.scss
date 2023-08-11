@@ -171,7 +171,7 @@
 
 
 
-/*************Tentative de mixin pour media queries à revoir*****************/
+/*************mixin pour media queries*****************/
 @mixin tablet-only {
     @media screen and (min-width: map-get($breakpoints,tablet)){
         @content;

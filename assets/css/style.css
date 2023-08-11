@@ -20,7 +20,7 @@
 /**raccourcis de la liste mode de fonctionnement du site**/
 /*Raccourcis des "boutons" de la liste de plats "restaurant.html"*/
 /*mixin qui paramètre le titre d'une page "restaurant.html" */
-/*************Tentative de mixin pour media queries à revoir*****************/
+/*************mixin pour media queries*****************/
 body {
   margin: 0px;
   background-color: #ffffff;
