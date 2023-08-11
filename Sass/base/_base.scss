@@ -17,6 +17,12 @@ body{
 main{
     display: flex;
     flex-direction: column;
+    @include tablet-only{
+        align-items: center;
+        }
+    @include desktop-only{
+        align-items: center;
+        }
     }
 .order{
     margin-bottom: 25px;

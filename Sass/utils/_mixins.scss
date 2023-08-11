@@ -104,7 +104,7 @@
 }
 /*Bouton arrondi*/
 @mixin btn-rounded{
-    border-radius: 25px;
+    border-radius: 40px;
 }
 /*Bouton carré*/
 @mixin btn_square{
@@ -117,7 +117,6 @@
 }
 /*Bouton modif 2*/
 @mixin btn_modif{
-    width: 80%;
     margin: 15px 0px;
     border: none;
     padding: 24px 18px;
@@ -157,7 +156,7 @@
 }
 @mixin plates-names{
     font-family: 'roboto',medium;
-    font-style: unset;
+    font-style: normal;
     font-weight: 500;
     font-size: 18px;
 }
@@ -183,3 +182,4 @@
         @content;
     }
 }
+

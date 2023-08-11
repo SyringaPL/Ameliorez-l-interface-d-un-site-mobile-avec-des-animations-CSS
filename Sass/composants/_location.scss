@@ -1,5 +1,5 @@
 /* Zone de saisie pour la localisation */
-input{
+.location-input{
     @include nav-footer;
     color: $main-police-color;
     border: none;
@@ -24,12 +24,12 @@ input{
     }
     }
 
-form{
+.location-form{
     display: flex;
     width: 136%;
     justify-content: center;
     }
-form .label{
+.location-form .label{
     display: flex;
     justify-content: center;
 }

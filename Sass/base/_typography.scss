@@ -6,14 +6,14 @@
     align-items: center;
     justify-content: center;
     padding: 15px;
-    padding-left: 180px;
-    padding-right: 180px;
     margin-bottom: 40px;
     @include tablet-only{
-        margin-bottom: 3px
+        margin-bottom: 3px;
     }
     @include desktop-only{
-        margin-bottom: 3px
+        margin-bottom: 3px;
+        padding-left: 180px;
+        padding-right: 180px;
     }
     h1{
         @include presentation-h1;
@@ -46,14 +46,12 @@
     padding: 15px;
     @include tablet-only{
         margin-top: 5px;
-        padding-left: 180px;
-        padding-right: 180px;
+        width: 568px;
         margin-bottom: 19px;
     }
     @include desktop-only{
         margin-top: 5px;
-        padding-left: 180px;
-        padding-right: 180px;
+        width: 1000px;
         margin-bottom: 19px;
     }
     .sorting li{
@@ -70,6 +68,7 @@
     @include tablet-only{
         display: flex;
         justify-content: space-between;
+        flex-direction: row;
     }
     @include desktop-only{
         display: flex;
@@ -100,6 +99,16 @@
 
 /*Police de caractère du nom du restaurant*/
 .restaurants_name h1{
-    margin-left: -10px;
+    margin-left: -15px;
     @include restaurant-police-title;
+    @include tablet-only{
+        display: flex;
+        justify-content: center;
+        margin-right: 25px;
+    }
+    @include desktop-only{
+        display: flex;
+        justify-content: center;
+        margin-right: 25px;
+    }
 }

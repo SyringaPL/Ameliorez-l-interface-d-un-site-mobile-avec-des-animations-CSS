@@ -6,6 +6,7 @@ ul{
     align-items: center;
     @include desktop-only{
         justify-content: space-between;
+        flex-direction: row;
     }
 }
 /**Test de puce sur bouton**/
@@ -20,20 +21,27 @@ li .user-guide{
 /**raccourci du bouton "explorer nos restaurants"**/
 .grosboutonrose{
     @include gbr;
+    @include nav-footer;
     &:hover{
         filter: brightness(1.2);
     }
+    /*modification de la taille du bouton*/
+    padding: 16px 50px;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 .order{
     justify-content: center;
     display: flex;
     align-items: center;
 }
-/**raccourci de la liste mode de fonctionnement du site**/
+/**chaque étape de la liste mode de fonctionnement du site**/
 .square{
     @include square;
     @include desktop-only{
         width: 28%;
+        width: fit-content;
+        justify-content: space-between;
     }
 }
 /**Flèche Retour**/

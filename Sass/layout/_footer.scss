@@ -1,9 +1,8 @@
 footer {
-    width: 100%;
     height: auto;
     color: $main-bg-color;
     background-color: $main-police-color;
-    padding: 14px; 
+    padding: 22px 25px; 
     @include tablet-only{
         display: flex;
         flex-direction: row-reverse;
@@ -22,15 +21,16 @@ footer {
 .logo-footer{
     @include logo-footer;
     @include tablet-only{
-        padding: 30px 25px;
+        padding: 25px 15px;
     }
     @include desktop-only{
         padding: 30px 25px;
     }
 }
 .nav_footer{
+    margin-top: 16px;
     @include tablet-only{
-        padding: 30px 25px;
+        padding: 30px 0px;
     }
     @include desktop-only{
         padding: 30px 25px;
@@ -41,6 +41,7 @@ footer {
     }
 .contact{
     @include contact;
+    color: $main-bg-color;
     }
 .nav_footer i{
     margin: 6px 10px 6px 6px;
@@ -58,16 +59,18 @@ footer {
         }
     }
 .ul_footer .partner{
-    width: 200px;
-    height: 20px;
+    width: auto;
+    padding: 0 5px;
 }
 .ul_footer .contact{
-    width: 135px;
+    width: auto;
     height: 20px;
+    padding: 2px 10px;
 }
-        .ul_footer a{
-            text-decoration: none;
-            }
-                .ul_footer a:visited{
-                    color: $main-bg-color;
-                    }
+.ul_footer a{
+    text-decoration: none;
+    color: $main-bg-color;
+    }
+.ul_footer a:visited{
+    color: $main-bg-color;
+    }

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!--Indispensable pour les Media Queries-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--police de caractères
+        google fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,500&family=Shrikhand&display=swap" rel="stylesheet">
+
+<!--Lien fontawasome (issu de cdnjs.com) mis-à-jour(différent de la doc de base, qui était au format 6.2.1)--> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!--lien avec le css ! Ne surtout pas oublier !-->
+     <link href="../assets/css/style.css" rel="stylesheet">
+
+<!--liens media queries si je fais un fichier par résolution-->
+     <link href="#" rel="stylesheet">
+     <link href="#" rel="stylesheet">
+
+<!--Titre de la page, apparait sur l'onglet du navigateur-->
+    <title>Menu - Le délice des sens</title>
+</head>
+<body>
+    <div class="main-container"> 
+        <header>  
+            <div class="return">
+                <a href="../index.html"><i class="fa-sharp fa-solid fa-arrow-left fa-lg"></i></a>
+            </div>
+            <div class="logo">
+                ohmyfood
+            </div>    
+            
+        </header>
+
+        <main>
+            <img class="restaurants" src="/assets/images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.webp" alt="image du restaurant"> 
+           
+            <div class="restaurants_name">
+                <h1>Le délice des sens</h1>
+            <!--Coeur qui se remplit au clic-->
+                <label class="vote-for">
+                    <input type="checkbox">
+                    <span class="fa-regular fa-heart unlike"></span>
+                    <span class="fa-solid fa-heart like"></span>
+                </label>
+            </div>
+<!--------------------------------Formulaire de commande--------------------------------------------------->                                
+
+            <form class="commande" method="get" action="#">
+                <h3 class="restaurants_menu_entree entrees">ENTREES</h3>
+                <div class="dish entrees">
+                    <input type="checkbox" name="entrees" value="entree1" id="choix1">
+                    <div class="dish_title">
+                        <label class="title" for="choix1">Tartare de thon</label>
+                        <label class="subtitle" for="choix1">Assaisonné au yuzu</label>
+                    </div>
+                    <label class="dish_price" for="choix1">25€</label>
+                    <div class="dish_select">
+                        <i class="fa-solid fa-check"></i>                      
+                    </div>   
+                </div>
+                <div class="dish entrees">
+                    <input type="checkbox" name="entrees" value="entree2" id="choix2">
+                    <div class="dish_title">
+                        <label class="title" for="choix2">Bouchée de homard croustillant</label>
+                        <label class="subtitle" for="choix2">Et sa farandole de petits légumes</label>
+                    </div>
+                    <label class="dish_price" for="choix2">35€</label>
+                    <div class="dish_select">
+                        <i class="fa-solid fa-check"></i>
+                    </div>      
+                </div>    
+                <div class="dish entrees">
+                    <input type="checkbox" name="entrees" value="entree3" id="choix3">
+                    <div class="dish_title">
+                        <label class="title" for="choix3">Poulet rôti aux herbes de Provence</label>
+                        <label class="subtitle" for="choix3">Et sa crème de truffe</label>
+                    </div>
+                    <label class="dish_price" for="choix3">40€</label>
+                    <div class="dish_select"> 
+                        <i class="fa-solid fa-check"></i>
+                    </div> 
+                </div>       
+                <h3 class="restaurants_menu_hot-dishes hot-dishes">PLATS</h3>
+                <div class="dish hot-dishes">
+                    <input type="checkbox" name="dishes" value="dishe1" id="option1">
+                    <div class="dish_title">
+                        <label class="title" for="option1">Poulet rôti aux herbes de Provence</label>
+                        <label class="subtitle" for="option1">Et sa crème de truffe</label>
+                    </div>
+                    <label class="dish_price" for="option1">40€</label>
+                    <div class="dish_select">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                </div>       
+                <div class="dish hot-dishes">
+                    <input type="checkbox" name="dishes" value="dishe2" id="option2">
+                    <div class="dish_title">
+                        <label class="title" for="option2">Langoustine rôtie</label>
+                        <label class="subtitle" for="option2">Et ses légumes de saison</label>
+                    </div>
+                    <label class="dish_price" for="option2">35€</label>
+                    <div class="dish_select">
+                        <i class="fa-solid fa-check"></i>
+                    </div>    
+                </div>    
+                <div class="dish hot-dishes">
+                    <input type="checkbox" name="dishes" value="dishe3" id="option3">
+                    <div class="dish_title">
+                        <label class="title" for="option3">Côte de boeuf Angus</label>
+                        <label class="subtitle" for="option3">Et sa purée de panais</label>
+                    </div>
+                    <label class="dish_price" for="option3">44€</label>
+                    <div class="dish_select">
+                        <i class="fa-solid fa-check"></i>
+                    </div>  
+                </div> 
+                <h3 class="restaurants_menu_dessert desserts">DESSERT</h3>
+                <div class="dish desserts">
+                    <input type="checkbox" name="dessert" value="dessert1" id="dessert1">
+                    <div class="dish_title">
+                        <label class="title" for="dessert1">Oeuf au plat</label>
+                        <label class="subtitle" for="dessert1">Assaisonné à la truffe sur lit de caviar</label>
+                    </div>
+                    <label class="dish_price" for="dessert1">76€</label>
+                    <div class="dish_select">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                </div>
+                <div class="dish desserts">
+                    <input type="checkbox" name="dessert" value="dessert2" id="dessert2">
+                    <div class="dish_title">
+                        <label class="title" for="dessert2">Crème brulée</label>
+                        <label class="subtitle" for="dessert2">Revisitée</label>
+                    </div>
+                    <label class="dish_price" for="dessert2">22€</label>
+                    <div class="dish_select">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                </div>   
+                <div class="dish desserts">
+                    <input type="checkbox" name="dessert" value="dessert3" id="dessert3">
+                    <div class="dish_title">
+                        <label class="title" for="dessert3">Tiramisu</label>
+                        <label class="subtitle" for="dessert3">A la noisette</label>
+                    </div>
+                    <label class="dish_price" for="dessert3">23€</label>
+                    <div class="dish_select">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                </div>                      
+                <div class="order">
+                    <input class="grosboutonrose" type="submit" value="Commander">
+            </div>
+            </form>
+        </main>
+        <footer>
+            <div class="logo-footer">
+                Ohmyfood
+            </div>
+            <nav class="nav_footer">
+                <ul class="ul_footer">
+                    <li class="partner"><a href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a></li>
+                    <li class="partner"><a href="#"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a></li>
+                    <li class="contact"><a href="#">Mentions légales</a></li>
+                    <li class="contact"><a href="mailto:#">Contact</a></li>
+                </ul>
+            </nav>
+        </footer>
+    </div>
+
+</body>
+</html>
