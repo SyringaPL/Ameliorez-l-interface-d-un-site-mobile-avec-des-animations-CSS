@@ -458,7 +458,7 @@ li .user-guide {
 }
 @media screen and (min-width: 768px) {
   .restaurants_name {
-    width: 600px;
+    width: 75%;
     display: flex;
     justify-content: center;
   }
@@ -474,13 +474,13 @@ li .user-guide {
 /**Image de présentation des PAGES restaurants**/
 .restaurants {
   display: flex;
-  width: 100%;
-  height: auto;
+  width: 100vw;
+  height: 300px;
   /*La petite ligne verte sous le mot "Entrées"*/
 }
 @media screen and (min-width: 768px) {
   .restaurants {
-    width: 810px;
+    width: 100vw;
     height: 410px;
   }
 }
