@@ -279,6 +279,7 @@ li .user-guide {
 }
 .grosboutonrose:hover {
   filter: brightness(1.2);
+  box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
 }
 
 .order {
