@@ -82,6 +82,7 @@ main {
 @media screen and (min-width: 768px) {
   .presentation {
     margin-bottom: 3px;
+    width: 700px;
   }
 }
 @media screen and (min-width: 1400px) {
@@ -142,7 +143,7 @@ main {
 @media screen and (min-width: 768px) {
   .sorting {
     margin-top: 5px;
-    width: 568px;
+    width: 700px;
     margin-bottom: 19px;
   }
 }
@@ -299,6 +300,10 @@ li .user-guide {
   margin: 15px 0px;
   border: none;
   padding: 24px 18px;
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 @media screen and (min-width: 1400px) {
   .square {
@@ -330,7 +335,7 @@ li .user-guide {
 @media screen and (min-width: 768px) {
   .restaurants_list {
     margin-top: 11px;
-    width: 568px;
+    width: 700px;
   }
 }
 @media screen and (min-width: 1400px) {

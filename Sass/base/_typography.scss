@@ -9,6 +9,7 @@
     margin-bottom: 40px;
     @include tablet-only{
         margin-bottom: 3px;
+        width: 700px;
     }
     @include desktop-only{
         margin-bottom: 3px;
@@ -46,7 +47,7 @@
     padding: 15px;
     @include tablet-only{
         margin-top: 5px;
-        width: 568px;
+        width: 700px;
         margin-bottom: 19px;
     }
     @include desktop-only{
