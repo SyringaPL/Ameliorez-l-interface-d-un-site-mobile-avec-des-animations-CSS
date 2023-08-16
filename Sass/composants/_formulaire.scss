@@ -38,7 +38,7 @@
       }
     &_select{
         width: 0px;
-        height: 0px;
+
         background-color: $miscellanius-bg-color;
         display: flex;
         justify-content: center;
@@ -46,8 +46,6 @@
         position: relative;
         overflow: hidden;
         white-space: nowrap;
-        transition-duration: 0.3s;
-        transition-timing-function: ease-in-out;
       }
     }
 .dish input[type=checkbox]{
@@ -84,7 +82,6 @@
 .dish input[type=checkbox]:checked ~.dish_title{
     width: 58%;
     transition-duration: 0.3s;
-    transition-timing-function: ease-in-out; 
     @include tablet-only{
         width: 200%;
     }
@@ -95,7 +92,7 @@
 .dish input[type=checkbox]:checked ~ .dish_select{
     width: 20%;
     height: auto;
-    transition: 0.3s ease-in-out;
+    transition-duration: 0.3s;
     @include tablet-only{
         width: 30%;
     }
@@ -103,6 +100,14 @@
         width: 15%;
     }
 }
+
+.dish input[type=checkbox]:not(:checked) ~ .dish_select{
+    width: 0px;
+    transition-duration: 0.25s;
+}
+
+
+
 /*Alignement des rubriques "entrées", "plats chaud" et "dessert"*/
 .restaurants_menu_entree,
 .restaurants_menu_hot-dishes,

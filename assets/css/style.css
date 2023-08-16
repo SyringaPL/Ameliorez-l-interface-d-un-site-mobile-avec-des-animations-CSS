@@ -794,7 +794,6 @@ li .user-guide {
 }
 .dish_select {
   width: 0px;
-  height: 0px;
   background-color: #99E2D0;
   display: flex;
   justify-content: center;
@@ -802,8 +801,6 @@ li .user-guide {
   position: relative;
   overflow: hidden;
   white-space: nowrap;
-  transition-duration: 0.3s;
-  transition-timing-function: ease-in-out;
 }
 
 .dish input[type=checkbox] {
@@ -849,7 +846,6 @@ li .user-guide {
 .dish input[type=checkbox]:checked ~ .dish_title {
   width: 58%;
   transition-duration: 0.3s;
-  transition-timing-function: ease-in-out;
 }
 @media screen and (min-width: 768px) {
   .dish input[type=checkbox]:checked ~ .dish_title {
@@ -865,7 +861,7 @@ li .user-guide {
 .dish input[type=checkbox]:checked ~ .dish_select {
   width: 20%;
   height: auto;
-  transition: 0.3s ease-in-out;
+  transition-duration: 0.3s;
 }
 @media screen and (min-width: 768px) {
   .dish input[type=checkbox]:checked ~ .dish_select {
@@ -876,6 +872,11 @@ li .user-guide {
   .dish input[type=checkbox]:checked ~ .dish_select {
     width: 15%;
   }
+}
+
+.dish input[type=checkbox]:not(:checked) ~ .dish_select {
+  width: 0px;
+  transition-duration: 0.25s;
 }
 
 /*Alignement des rubriques "entrées", "plats chaud" et "dessert"*/
