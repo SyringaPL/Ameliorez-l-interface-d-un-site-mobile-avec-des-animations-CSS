@@ -128,10 +128,12 @@
     @include tablet-only{
         width: 100vw;
         height: 410px;
+        object-fit: cover;
     }
     @include desktop-only{
         width: 1400px;
-        height: 573px
+        height: 573px;
+        object-fit: cover;
     }
     /*La petite ligne verte sous le mot "Entrées"*/
     &_menu_entree {

@@ -421,6 +421,9 @@ li .user-guide {
   display: flex;
   justify-content: right;
 }
+.restaurants_cards_mini a {
+  width: 100%;
+}
 
 /*****Etiquette "nouveau"*********/
 .new {
@@ -482,12 +485,14 @@ li .user-guide {
   .restaurants {
     width: 100vw;
     height: 410px;
+    object-fit: cover;
   }
 }
 @media screen and (min-width: 1400px) {
   .restaurants {
     width: 1400px;
     height: 573px;
+    object-fit: cover;
   }
 }
 .restaurants_menu_entree {
