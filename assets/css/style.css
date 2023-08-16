@@ -271,6 +271,7 @@ li .user-guide {
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
+  border: none;
   /*modification de la taille du bouton*/
   padding: 16px 50px;
   margin-top: 40px;
@@ -420,9 +421,6 @@ li .user-guide {
   width: 100%;
   display: flex;
   justify-content: right;
-}
-.restaurants_cards_mini a {
-  width: 100%;
 }
 
 /*****Etiquette "nouveau"*********/

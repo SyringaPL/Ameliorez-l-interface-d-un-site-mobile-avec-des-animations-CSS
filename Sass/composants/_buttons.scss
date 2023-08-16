@@ -22,6 +22,7 @@ li .user-guide{
 .grosboutonrose{
     @include gbr;
     @include nav-footer;
+    border: none;
     &:hover{
         filter: brightness(1.2);
     }
