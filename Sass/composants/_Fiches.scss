@@ -45,8 +45,9 @@
         margin-top: 9px;
     }
     &_content{
-        display: block;
-        width: 80%;
+        display: inline-block;
+        width: 60%;
+        margin-left: 15px;
         }
     &_title{   /*Nom du restaurant*/
         font-family: 'Roboto';
@@ -80,6 +81,15 @@
             justify-content: right;
             }
         }
+    }
+    .linked{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        text-decoration-line: none;
+        color: $main-police-color;
+        justify-content: space-between;
     }
 /*****Etiquette "nouveau"*********/
 .new{
