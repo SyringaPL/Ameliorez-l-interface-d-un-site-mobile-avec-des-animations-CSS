@@ -1,5 +1,6 @@
 .vote-for{/**container (custom le label)**/
-    display: block;
+    display: inline-block;
+    width: 15%;
     position: relative;
     cursor: pointer;
     /*controls whether the user can select text*/
@@ -29,6 +30,7 @@
 .like{
     color: $gradient-main-color;
 }
+
 
 
 

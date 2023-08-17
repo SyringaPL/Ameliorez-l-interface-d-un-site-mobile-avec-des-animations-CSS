@@ -40,15 +40,18 @@ li .user-guide{
 /**chaque étape de la liste mode de fonctionnement du site**/
 .square{
     @include square;
+    width: 85%;
     @include desktop-only{
         width: 28%;
         width: fit-content;
         justify-content: space-between;
     }
-    display: flex;
-    align-items: center;
-    margin-left: 15px;
-    margin-right: 15px;
+    @include tablet-only{
+        display: flex;
+        align-items: center;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
 }
 /**Flèche Retour**/
 .return a:visited{
